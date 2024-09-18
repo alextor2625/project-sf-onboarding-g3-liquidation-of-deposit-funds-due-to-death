@@ -1,0 +1,39 @@
+<template>
+    <div class="card">
+        <div class="wrapper">
+            <div class="content">
+                <p class="blue-text sorry-text">We are sorry for your loss, and we are here to support you during this difficult time.</p>
+                <div class="form-container">
+                    <h3 class="blue-text" style="margin-left:5px;"><b>What is your request?</b></h3>
+                    <form>
+                        <select class="selector" onchange={handleSelection}>
+                            <template for:each={options} for:item="opt">
+                                <option value={opt.value} key={opt.value}>{opt.label}</option>
+                            </template>
+                        </select>
+                    </form>
+
+                    <template lwc:if={message}>
+                        <p class="blue-text" style="margin-top:10px;">{message}</p>
+                    </template>
+
+                    <template lwc:if={showContinueButton}>
+                        <template lwc:if={disableButton}>
+                            <div class="btn-container">
+                                <a class="custom-btn-deactivate" href="#">Continue</a>
+                            </div>
+                        </template>
+                        <template lwc:else>
+                            <div class="btn-container-right">
+                                <a class="custom-btn" href={selectedValue}>Continue</a>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template lwc:if={showRequiredDocuments}>
+        <c-liquidation-of-funds-required-documents></c-liquidation-of-funds-required-documents>
+    </template>
+</template>

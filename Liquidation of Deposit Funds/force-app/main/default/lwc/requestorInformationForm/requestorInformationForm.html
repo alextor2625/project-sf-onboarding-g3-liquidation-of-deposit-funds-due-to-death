@@ -1,0 +1,46 @@
+<template>
+    <div class="form-container">
+        <div class="content">
+            <div class="title">
+                <h1><b>Requestor Information</b>:</h1>
+            </div>
+            <div class="input-section">
+                <div class="input-container">
+                    <label for="firstName">First Name</label>
+                    <input required type="text" name="firstName" placeholder="First Name"
+                        value={requestorInformationData.firstName} onchange={handleChange} disabled>
+                    <p lwc:if={firstNameErrorMessage} class="error-message">{firstNameErrorMessage}</p>    
+                </div>
+                <div class="input-container">
+                    <label for="lastName">Last Name</label>
+                    <input required type="text" name="lastName" placeholder="Last Name"
+                        value={requestorInformationData.lastName} onchange={handleChange} disabled>
+                <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="input-container">
+                    <label for="relationship">Relationship</label>
+                    <input required type="text" placeholder="Relationship" name="relationship" value={requestorInformationData.relationship} onchange={handleChange}>
+                    <p lwc:if={relationshipErrorMessage} class="error-message">{relationshipErrorMessage}</p>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input required type="email" placeholder="Email" name="email" value={requestorInformationData.email} onchange={handleChange} disabled>
+                    <p lwc:if={emailErrorMessage} class="error-message">{emailErrorMessage}</p>
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="input-container">
+                    <label for="preferredPhoneNumber">Preferred Phone Number</label>
+                    <input required type="tel" placeholder="Preferred Phone Number" name="preferredPhoneNumber" value={requestorInformationData.preferredPhoneNumber} onchange={handleChange} disabled>
+                    <p lwc:if={preferredPhoneNumberErrorMessage} class="error-message">{preferredPhoneNumberErrorMessage}</p>
+                </div>
+                <div class="input-container">
+                    <label for="otherPhoneNumber">Other Phone Number</label>
+                    <input required type="tel" placeholder="Other Phone Number" name="otherPhoneNumber" value={requestorInformationData.otherPhoneNumber} onchange={handleChange}>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

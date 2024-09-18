@@ -1,0 +1,76 @@
+<template>
+    <div class="form-container">
+        <div class="content">
+            <div class="title">
+                <h1><b>Disbursement Preference</b>:</h1>
+            </div>
+            <div class="input-section">
+                <div class="selector-input-container-full">
+                    <label>Disbursement Preference: Account deposit is only available for Popular accounts
+                    </label>
+                    <select onchange={handleSelection}>
+                        <template for:each={disbursementPreferenceOptions} for:item="option">
+                            <option value={option.value} key={option.label}>{option.label}</option>
+                        </template>
+                    </select>
+                </div>
+            </div>
+            <!-- Account-Deposit -->
+            <div class={accountDepositSectionClass}>
+                <div lwc:if={showAccountDepositSection}>
+                    <div class="input-section">
+                        <div class="input-container">
+                            <label for="accountHolderName">Account Holder Name</label>
+                            <input type="text" placeholder="Account Holder Name" value={disbursementInformationData.accountHolderName}>
+                        </div>
+                        <div class="input-container">
+                            <label for="disbursementAccountNumber">Account Number</label>
+                            <input type="text" placeholder="Account Number" value={disbursementInformationData.disbursementAccountNumber}>
+                        </div>
+                    </div>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>Popular Document where heirs authorized to disburse in the account</p>
+        
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file"  accept=".pdf" name="heirsDisbursementAuthorizationDocument" data-file-input="heirsDisbursementAuthorizationDocument" onchange={handleFileChange}>
+        
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="heirsDisbursementAuthorizationDocument" onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pick-Up-Check --> <!-- NOT DONE -->
+            <div class={pickUpCheckSectionClass}>
+                <div lwc:if={showPickUpCheckSection}>
+                    <div class="input-section">
+                        <div class="input-container">
+                            <label for=""></label>
+                            <input type="text">
+                        </div>
+                        <div class="input-container">
+                            <label for=""></label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Account Balance More Than 15k? -->
+            <div class="selector-input-section">
+                <div class="selector-input-container-row">
+                    <span>Is the account balance at the death date was greater than $15K?</span>
+                    <select name="greaterThan15k">
+                        <template for:each={greaterThan15kOptions} for:item="option">
+                            <option value={option.value} key={option.label}>{option.label}</option>
+                        </template>
+                    </select>
+                </div>
+            </div>
+            <div class="input-section"></div>
+            <div class="input-section"></div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,49 @@
+<template>
+    <div class="form-container">
+        <div class="content">
+            <div class="title">
+                <h1><b>Deceased customer information</b>:</h1>
+            </div>
+            <div class="input-section">
+                <div class="input-container">
+                    <label for="firstName">First Name</label>
+                    <input required type="text" name="firstName" placeholder="First Name"
+                        value={deceasedCustomerInformationData.firstName} onchange={handleChange}>
+                    <p lwc:if={firstNameErrorMessage} class="error-message">{firstNameErrorMessage}</p>    
+                </div>
+                <div class="input-container">
+                    <label for="lastName">Last Name</label>
+                    <input required type="text" name="lastName" placeholder="Last Name"
+                        value={deceasedCustomerInformationData.lastName} onchange={handleChange}>
+                <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="input-container">
+                    <label for="ssn">Social Security Number</label>
+                    <input required type="text" name="ssn" placeholder="Social Security Number"
+                        value={deceasedCustomerInformationData.ssn} onchange={handleChange}>
+                <p lwc:if={ssnErrorMessage} class="error-message">{ssnErrorMessage}</p>
+                </div>
+                <div class="input-container">
+                    <label for="dateOfDeath">Date Of Death</label>
+                    <input required type="date" name="dateOfDeath" onchange={handleChange}>
+                    <p lwc:if={dateOfDeathErrorMessage} class="error-message">{dateOfDeathErrorMessage}</p>
+                </div>
+            </div>
+            <div class="file-input-section">
+                <div class="file-input-container">
+                    <p>Upload Death Certificate (PDF)</p>
+
+                    <!-- Hidden file input without using id -->
+                    <input class="file-input" required type="file"  accept=".pdf" name="deathCertificate" data-file-input="deathCertificate" onchange={handleFileChange}>
+
+                    <!-- Label now triggers the file input programmatically -->
+                    <label class="upload-button" onclick={triggerFileUpload}>Upload Death Certificate</label>
+                    <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                    <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
