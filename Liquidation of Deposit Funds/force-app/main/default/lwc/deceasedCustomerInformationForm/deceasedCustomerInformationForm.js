@@ -82,8 +82,8 @@ export default class DeceasedCustomerInformationForm extends LightningElement {
             fileInputElement.textContent = file ? fileName : 'Upload Death Certificate'; 
             fileInputElement.style.color = file ? 'red' : '';
             const name = event.target.name;
-            console.log('FILE:', JSON.stringify(file));
-            file.name = "Death-Certificate";
+            console.log('FILE:', JSON.stringify(file.name), 'child component');
+            // file.name = "Death-Certificate";
             this.deceasedCustomerInformationData = { ...this.deceasedCustomerInformationData, [name]: file };
             // Dispatch the event with updated data
             this.dispatchEvent(new CustomEvent('deccustinfodatachange', {

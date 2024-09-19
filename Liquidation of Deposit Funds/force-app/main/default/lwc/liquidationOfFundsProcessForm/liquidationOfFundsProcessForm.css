@@ -64,3 +64,8 @@
 .custom-btn:hover {
     opacity: 0.5;
 }
+
+.button-container-center{
+    display: flex;
+    justify-content: center;
+}

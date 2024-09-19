@@ -1,0 +1,7 @@
+.read-only-progress{
+    pointer-events: none;
+}
+
+.read-only-progress > lightning-progress-step {
+    cursor: default;
+}

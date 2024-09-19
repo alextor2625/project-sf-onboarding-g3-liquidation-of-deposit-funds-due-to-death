@@ -43,6 +43,7 @@ export default class RequestorInformationForm extends LightningElement {
             const record = await getCurrentUser();
             this.requestorInformationData = {
                 ...this.requestorInformationData,
+                accId: record.ContactId,
                 email: record.Email ? record.Email : '',
                 preferredPhoneNumber: record.Phone ? record.Phone : '',
                 firstName: record.FirstName ? record.FirstName : '',

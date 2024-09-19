@@ -1,25 +1,32 @@
 public with sharing class CaseController {
-    public static void createCase(Id accId, Map<String, Object> formData, Map<String, Blob> pdfBlobs) {
-        List<Attachment> attachmentList = new List<Attachment>();
-        Case newCase = new Case(
-            First_Name__c = formData.containsKey('firstName') && (formData.get('firstName') != null || formData.get('firstName') != '')? String.valueOf(formData.get('firstName')): '', 
-            Last_Name__c = formData.containsKey('lastName') && (formData.get('lastName') != null || formData.get('lastName') != '')? String.valueOf(formData.get('lastName')): '', 
-            Social_Security_Number__c = formData.containsKey('ssn') && (formData.get('ssn') != null || formData.get('ssn') != '')? String.valueOf(formData.get('ssn')): '', 
-            Date_of_Death__c = formData.containsKey('dateOfDeath') && (formData.get('dateOfDeath') != null || formData.get('dateOfDeath') != '')? Date.valueOf(String.valueOf(formData.get('dateOfDeath'))): null,
-            Relationship__c = formData.containsKey('relationship') && (formData.get('relationship') != null || formData.get('relationship') != '')? String.valueOf(formData.get('relationship')): '',
-            Other_Phone_Number__c = formData.containsKey('otherPhoneNumber') && (formData.get('otherPhoneNumber') != null || formData.get('otherPhoneNumber') != '')? String.valueOf(formData.get('otherPhoneNumber')): '',
-            Disbursement__c = formData.containsKey('disbursementPreference') && (formData.get('disbursementPreference') != null || formData.get('disbursementPreference') != '')? String.valueOf(formData.get('disbursementPreference')): '',
-            AccountId = accId,
-            Account_Holder_Name__c = formData.containsKey('accountHolderName') && (formData.get('accountHolderName') != null || formData.get('accountHolderName') != '')? String.valueOf(formData.get('accountHolderName')): '',
-            Is_the_sum_all_account_more_than_15k__c	= formData.containsKey('greaterThan15k') && formData.get('greaterThan15k') != null ? Boolean.valueOf(formData.get('greaterThan15k')): false,
-            // Is_there_a_Will__c = ,
-            Origin ='Liquidation Of Funds Portal'
-
-            );
+    @AuraEnabled
+    public static void insertCase(Case newCase, Map<String, String> pdfBlobs) {
+        try {
+            // Insert the case
+            // for(String key: newCaseObj.keySet()){
+            //     if (newCaseObj.get(key) != null) {
+            //         newCase.put(key,newCaseObj.get(key));
+            //     }
+            // }
+            // Add the Blob if there are any
             insert newCase;
-            for(String key : pdfBlobs.keySet()) {
-                Blob pdfBlob = pdfBlobs.get(key);
-                if(pdfBlob != null){
+            Id caseId;
+            // caseId = insertCase.getId();
+            Case createdCase = [SELECT Id FROM Case where AccountId= :newCase.AccountId ORDER BY CreatedDate DESC LIMIT 1];
+            caseId = createdCase.Id;
+            
+            system.debug('Case ID: ' + caseId);
+
+            List<Attachment> attachmentList = new List<Attachment>();
+
+            // Iterate through the map of filenames and Base64-encoded content
+            for (String key : pdfBlobs.keySet()) {
+                String base64String = pdfBlobs.get(key);
+                if (base64String != null) {
+                    // Decode the Base64 string to Blob
+                    Blob pdfBlob = EncodingUtil.base64Decode(base64String);
+
+                    // Create the attachment object
                     attachmentList.add(
                         new Attachment(
                             Name = key,
@@ -30,6 +37,13 @@ public with sharing class CaseController {
                     );
                 }
             }
-        insert attachmentList;
+
+            // Insert all the attachments
+            insert attachmentList;
+
+        } catch (Exception e) {
+            System.debug('Exception: ' + e);
+            throw new AuraHandledException(e.getMessage());
+        }
     }
 }

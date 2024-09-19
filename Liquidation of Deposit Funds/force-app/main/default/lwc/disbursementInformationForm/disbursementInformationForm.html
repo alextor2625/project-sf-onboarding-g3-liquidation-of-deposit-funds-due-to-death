@@ -8,7 +8,7 @@
                 <div class="selector-input-container-full">
                     <label>Disbursement Preference: Account deposit is only available for Popular accounts
                     </label>
-                    <select onchange={handleSelection}>
+                    <select name='disbursementPreference' onchange={handleSelection}>
                         <template for:each={disbursementPreferenceOptions} for:item="option">
                             <option value={option.value} key={option.label}>{option.label}</option>
                         </template>
@@ -21,11 +21,11 @@
                     <div class="input-section">
                         <div class="input-container">
                             <label for="accountHolderName">Account Holder Name</label>
-                            <input type="text" placeholder="Account Holder Name" value={disbursementInformationData.accountHolderName}>
+                            <input type="text" placeholder="Account Holder Name" name="accountHolderName" value={disbursementInformationData.accountHolderName} onchange={handleChange}>
                         </div>
                         <div class="input-container">
                             <label for="disbursementAccountNumber">Account Number</label>
-                            <input type="text" placeholder="Account Number" value={disbursementInformationData.disbursementAccountNumber}>
+                            <input type="text" placeholder="Account Number" name="disbursementAccountNumber" value={disbursementInformationData.disbursementAccountNumber} onchange={handleChange}>
                         </div>
                     </div>
                     <div class="file-input-section">
@@ -62,7 +62,7 @@
             <div class="selector-input-section">
                 <div class="selector-input-container-row">
                     <span>Is the sum of all account balances at the death date was greater than$15K?</span>
-                    <select name="greaterThan15k" class="selector-input">
+                    <select name="greaterThan15k" class="selector-input" onchange={handleSelector}>
                         <template for:each={greaterThan15kOptions} for:item="option">
                             <option value={option.value} key={option.label}>{option.label}</option>
                         </template>
