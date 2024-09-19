@@ -18,10 +18,16 @@
                 <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
                 </div>
             </div>
-            <div class="input-section">
-                <div class="input-container">
+            <div class="input-section selector-input-section">
+                <div class="selector-input-container">
                     <label for="relationship">Relationship</label>
-                    <input required type="text" placeholder="Relationship" name="relationship" value={requestorInformationData.relationship} onchange={handleChange}>
+                    <select name="relationship" onchange={handleChange} class="selector-input place-holder-text">
+                        <template iterator:it={relationshipOptions} for:index="index">
+                            <option key={index} lwc:if={it.first} value={it.value.value} selected class="place-holder-text">{it.value.label}</option>
+                            <option key={index} lwc:else value={it.value.value} style="color: var(--popular-blue);">{it.value.label}</option>
+                        </template>
+                        
+                    </select>
                     <p lwc:if={relationshipErrorMessage} class="error-message">{relationshipErrorMessage}</p>
                 </div>
                 <div class="input-container">

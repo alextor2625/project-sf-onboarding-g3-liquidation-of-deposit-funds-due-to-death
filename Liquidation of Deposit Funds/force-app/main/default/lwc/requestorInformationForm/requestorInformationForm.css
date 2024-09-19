@@ -6,6 +6,10 @@
     font-size: large;
 }
 
+.place-holder-text {
+    color: var(--place-holder-gray);
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -65,6 +69,7 @@
     cursor: pointer; /* Make the label look clickable */
 }
 
+
 .upload-button{
     background-color: white;
 }
@@ -89,4 +94,23 @@ input {
 
 .single-input-section{
     margin: 10px 0 10px 0;
+}
+select {
+    border: 1.5px solid;
+    border-radius: 7px;
+    border-color: var(--gray);
+    padding: 10px;
+    width: 15rem;
+    background-color: white;
+    text-align: center;
+}
+.selector-input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 11px 0 11px;
+}
+.selector-input-section{
+    display:flex;
+    justify-content: center;
+    /* margin:10px; */
 }

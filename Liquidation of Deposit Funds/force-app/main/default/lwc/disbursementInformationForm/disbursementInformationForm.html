@@ -2,7 +2,7 @@
     <div class="form-container">
         <div class="content">
             <div class="title">
-                <h1><b>Disbursement Preference</b>:</h1>
+                <h1><b>Disbursement Information</b>:</h1>
             </div>
             <div class="input-section">
                 <div class="selector-input-container-full">
@@ -61,8 +61,8 @@
             <!-- Account Balance More Than 15k? -->
             <div class="selector-input-section">
                 <div class="selector-input-container-row">
-                    <span>Is the account balance at the death date was greater than $15K?</span>
-                    <select name="greaterThan15k">
+                    <span>Is the sum of all account balances at the death date was greater than$15K?</span>
+                    <select name="greaterThan15k" class="selector-input">
                         <template for:each={greaterThan15kOptions} for:item="option">
                             <option value={option.value} key={option.label}>{option.label}</option>
                         </template>
