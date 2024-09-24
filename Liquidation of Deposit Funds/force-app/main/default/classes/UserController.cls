@@ -1,5 +1,14 @@
 public with sharing class UserController {
     @AuraEnabled(cacheable=true)
+    public static Boolean isLoggedIn(){
+        try {
+            Id currentUserId = UserInfo.getUserId();
+            return String.isNotBlank(currentUserId);
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+    @AuraEnabled(cacheable=true)
     public static User getCurrentUser() {
         try {
             User currentUser = [SELECT Id, Email, Phone, FirstName, LastName, ContactId 

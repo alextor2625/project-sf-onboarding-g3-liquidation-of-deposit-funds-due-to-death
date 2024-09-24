@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title>reCAPTCHA demo: Simple page</title>
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+  <script>
+    function onSuccess(token) {
+      window.parent.postMessage(token, '*');
+    }
+  </script>
+</head>
+
+<body>
+  <form action="" method="POST">
+    <div class="g-recaptcha" data-sitekey="6LctA00qAAAAACAlg4b8CbXmgHc1Fv4qN4pOI1Nj" data-action="SUBMIT"
+      data-callback="onSuccess"></div>
+  </form>
+</body>
+
+</html>

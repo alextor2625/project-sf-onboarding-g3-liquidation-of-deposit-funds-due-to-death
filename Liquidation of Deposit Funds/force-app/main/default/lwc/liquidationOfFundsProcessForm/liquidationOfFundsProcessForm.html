@@ -18,8 +18,21 @@
                             disbursement-information-data={disbursementInformationData} 
                             ondisbursementinformationdatachange={handleDataChange}></c-disbursement-information-form>
                     </div>
+                    <div>
+                        <c-additional-required-documents-form  
+                            show-greater-than15k-additional-document-upload={showGreaterThan15kAdditionalDocumentUpload}
+                            additional-required-documents-data={additionalRequiredDocumentsData} 
+                            onadditionaldocumentsdatachange={handleDataChange}></c-additional-required-documents-form>
+                    </div>
+                    <div class="recaptcha-container">
+                        <iframe src={reCaptchaURL} scrolling="no"></iframe>   
+                    </div>
+                    <!-- <div class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                        </div>
+                    </div> -->
                     <div class="button-container-center">
-                        <button class="custom-btn" onclick={handleSubmit}>Submit</button>
+                        <a class={submitButtonClass} onclick={handleSubmit}>Submit</a>
                     </div>
                 </div>
             </div>

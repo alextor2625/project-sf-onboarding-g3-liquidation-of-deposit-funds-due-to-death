@@ -1,0 +1,202 @@
+<template>
+    <div class="form-container">
+        <div class="content">
+            <div class="title">
+                <h1><b>Additional Required Documents</b>:</h1>
+            </div>
+
+            <!-- Is there a will? -->
+            <div class="selector-input-section">
+                <div class="selector-input-container-row">
+                    <span>Is there a Will?</span>
+                    <select name="isThereAWill" class="selector-input place-holder-text" onchange={handleSelection}>
+                        <template iterator:it={isThereAWillOptions}>
+                            <option lwc:if={it.first} value={it.value.value} key={it.value.label}
+                                class="place-holder-text">{it.value.label}</option>
+                            <option lwc:else value={it.value.value} key={it.value.label} class="blue-text">
+                                {it.value.label}</option>
+                        </template>
+                    </select>
+                </div>
+            </div>
+
+            <div class={resolutionOfDeclarationOfHeirsDocumentClass}>
+                <template lwc:if={showResolutionOfDeclarationOfHeirsDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Resolution of Declaration of heirs
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="resolutionOfDeclarationOfHeirsDocument"
+                                data-file-input="resolutionOfDeclarationOfHeirsDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="resolutionOfDeclarationOfHeirsDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={willDocumentClass}>
+                <template lwc:if={showWillDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Will
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="willDocument"
+                                data-file-input="willDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="willDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={certificationRegistroPoderesTestamentosDocumentClass}>
+                <template lwc:if={showCertificationRegistroPoderesTestamentosDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Certification from the Registro de Poderes y Testamentos
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="certificationRegistroPoderesTestamentosDocument"
+                                data-file-input="certificationRegistroPoderesTestamentosDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="certificationRegistroPoderesTestamentosDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={resolutionTestamentaryLettersExecutorDocumentClass}>
+                <template lwc:if={showResolutionTestamentaryLettersExecutorDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Resolution of Testamentary Letters, if executor is representing the estate
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="resolutionTestamentaryLettersExecutorDocument"
+                                data-file-input="resolutionTestamentaryLettersExecutorDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="resolutionTestamentaryLettersExecutorDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={lastWillAndTestamentDocumentClass}>
+                <template lwc:if={showLastWillAndTestamentDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Last Will and Testament
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="lastWillAndTestamentDocument"
+                                data-file-input="lastWillAndTestamentDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="lastWillAndTestamentDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={lettersOfAdministrationOrSmallEstateProcedureDocumentClass}>
+                <template lwc:if={showLettersOfAdministrationOrSmallEstateProcedureDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Letters of Administration granted by Surrogate of Probate Court or substitute document, in case of Small State Procedure
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="lettersOfAdministrationOrSmallEstateProcedureDocument"
+                                data-file-input="lettersOfAdministrationOrSmallEstateProcedureDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="lettersOfAdministrationOrSmallEstateProcedureDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={certificateReleaseTaxLienEstateReturnDetallesBienesDocumentClass}>
+                <template lwc:if={showGreaterThan15kAdditionalDocumentUpload}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Certificate of Release of Tax Lien with the Estate Tax Return, including Detalles de Bienes addendum
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="certificateReleaseTaxLienEstateReturnDetallesBienesDocument"
+                                data-file-input="certificateReleaseTaxLienEstateReturnDetallesBienesDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="certificateReleaseTaxLienEstateReturnDetallesBienesDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class={advancementOrDisbursementRequirementsDocumentClass}>
+                <template lwc:if={showAdvancementOrDisbursementRequirementsDocument}>
+                    <div class="file-input-section">
+                        <div class="file-input-container">
+                            <p>
+                                Upload Popular's Document: Requirements for Advancement or Disbursement of Deceased Customer Funds
+                            </p>
+
+                            <!-- Hidden file input without using id -->
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="advancementOrDisbursementRequirementsDocument"
+                                data-file-input="advancementOrDisbursementRequirementsDocument" onchange={handleFileChange}>
+
+                            <!-- Label now triggers the file input programmatically -->
+                            <label class="upload-button" data-name="advancementOrDisbursementRequirementsDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
+                            <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                            <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+        </div>
+    </div>
+</template>

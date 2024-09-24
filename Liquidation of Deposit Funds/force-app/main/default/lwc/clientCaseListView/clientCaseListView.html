@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="My Cases" icon-name="standard:case">
+        <template lwc:if={cases}>
+
+            <div class="slds-scrollable_x">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_stripped">
+                    <thead>
+                        <tr class="slds-text-heading_small">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Case Number">Case Number</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Deceased Member">Deceased Member</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Created Date">Created Date</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={cases} for:item="c">
+                            <tr key={c.Id} class="slds-text-heading_small">
+                                <td data-label="Case Number">
+                                    <div class="slds-truncate" title={c.CaseNumber}><a href={c.Case_Detail_Page_URL__c}>{c.CaseNumber}</a></div>
+                                </td>
+                                <td data-label="Deceased Member">
+                                    <div class="slds-truncate" title={c.First_Name__c}>{c.First_Name__c} {c.Last_Name__c}</div>
+                                </td>
+                                <td data-label="Created Date">
+                                    <div class="slds-truncate" title={c.CreatedDate}>{c.formattedDate}</div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+        <template if:false={cases}>
+            <p class="slds-text-align_center">No Cases Found</p>
+        </template>
+    </lightning-card>
+</template>

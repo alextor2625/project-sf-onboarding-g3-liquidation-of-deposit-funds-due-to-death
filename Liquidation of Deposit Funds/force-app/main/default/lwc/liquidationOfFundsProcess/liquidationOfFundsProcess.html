@@ -32,8 +32,10 @@
                 </div>
             </div>
         </div>
+        <div class={liquidationOfFundsRequiredDocumentsClass}>
+            <template lwc:if={showRequiredDocuments}>
+                <c-liquidation-of-funds-required-documents is-logged-in={isLoggedIn}></c-liquidation-of-funds-required-documents>
+            </template>
+        </div>
     </div>
-    <template lwc:if={showRequiredDocuments}>
-        <c-liquidation-of-funds-required-documents></c-liquidation-of-funds-required-documents>
-    </template>
 </template>

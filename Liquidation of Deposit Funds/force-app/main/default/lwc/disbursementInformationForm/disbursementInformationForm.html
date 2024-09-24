@@ -8,9 +8,12 @@
                 <div class="selector-input-container-full">
                     <label>Disbursement Preference: Account deposit is only available for Popular accounts
                     </label>
-                    <select name='disbursementPreference' onchange={handleSelection}>
-                        <template for:each={disbursementPreferenceOptions} for:item="option">
-                            <option value={option.value} key={option.label}>{option.label}</option>
+                    <select name='disbursementPreference' onchange={handleSelection} class="place-holder-text">
+                        <template iterator:it={disbursementPreferenceOptions}>
+                            <option lwc:if={it.first} value={it.value.value} key={it.value.label}
+                                class="place-holder-text">{it.value.label}</option>
+                            <option lwc:else value={it.value.value} key={it.value.label} class="blue-text">
+                                {it.value.label}</option>
                         </template>
                     </select>
                 </div>
@@ -21,22 +24,27 @@
                     <div class="input-section">
                         <div class="input-container">
                             <label for="accountHolderName">Account Holder Name</label>
-                            <input type="text" placeholder="Account Holder Name" name="accountHolderName" value={disbursementInformationData.accountHolderName} onchange={handleChange}>
+                            <input type="text" placeholder="Account Holder Name" name="accountHolderName"
+                                value={disbursementInformationData.accountHolderName} onchange={handleChange}>
                         </div>
                         <div class="input-container">
                             <label for="disbursementAccountNumber">Account Number</label>
-                            <input type="text" placeholder="Account Number" name="disbursementAccountNumber" value={disbursementInformationData.disbursementAccountNumber} onchange={handleChange}>
+                            <input type="text" placeholder="Account Number" name="disbursementAccountNumber"
+                                value={disbursementInformationData.disbursementAccountNumber} onchange={handleChange}>
                         </div>
                     </div>
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>Popular Document where heirs authorized to disburse in the account</p>
-        
+
                             <!-- Hidden file input without using id -->
-                            <input class="file-input" required type="file"  accept=".pdf" name="heirsDisbursementAuthorizationDocument" data-file-input="heirsDisbursementAuthorizationDocument" onchange={handleFileChange}>
-        
+                            <input class="file-input" required type="file" accept=".pdf"
+                                name="heirsDisbursementAuthorizationDocument"
+                                data-file-input="heirsDisbursementAuthorizationDocument" onchange={handleFileChange}>
+
                             <!-- Label now triggers the file input programmatically -->
-                            <label class="upload-button" data-name="heirsDisbursementAuthorizationDocument" onclick={triggerFileUpload}>Upload Document</label>
+                            <label class="upload-button" data-name="heirsDisbursementAuthorizationDocument"
+                                onclick={triggerFileUpload}>Upload Document</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -45,32 +53,211 @@
             </div>
             <!-- Pick-Up-Check --> <!-- NOT DONE -->
             <div class={pickUpCheckSectionClass}>
-                <div lwc:if={showPickUpCheckSection}>
+                <template lwc:if={showPickUpCheckSection}>
                     <div class="input-section">
-                        <div class="input-container">
-                            <label for=""></label>
-                            <input type="text">
-                        </div>
-                        <div class="input-container">
-                            <label for=""></label>
-                            <input type="text">
+                        <div class="selector-input-container-full">
+                            <label for="pickUpCheckBranchTown">Pick the branch town you wish to pick-up check:</label>
+                            <select name="pickUpCheckBranchTown" class="select-input place-holder-text"
+                                onchange={handleSelection}>
+                                <template iterator:it={branchTownOptions}>
+                                    <option lwc:if={it.first} key={it.value.value} value="" class="place-holder-text">
+                                        {it.value.label}</option>
+                                    <option lwc:else key={it.value.value} value={it.value.value} class="blue-text">
+                                        {it.value.label}</option>
+
+                                </template>
+                            </select>
                         </div>
                     </div>
-                </div>
+                    <div class="input-section">
+                        <div class="selector-input-container-full">
+                            <label for="pickUpCheckBranch">Pick the branch you wish to pick-up check:</label>
+                            <select name="pickUpCheckBranch" disabled={disableBranchSelector} class="select-input place-holder-text"
+                                onchange={handleSelection}>
+                                <option value="Select Branch" class="place-holder-text">
+                                    Select Branch
+                                </option>
+                                <template iterator:it={branchOptions}>
+                                    <option key={it.value} value={it.value} class="blue-text">
+                                        {it.value}</option>
+                                </template>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Will All The Heirs Be Present? Selection -->
+                    <div class="selector-input-section">
+                        <div class="selector-input-container-row">
+                            <span>Will all heirs be present when the picking-up the check?</span>
+                            <select name="pickUpCheckWillAllHeirsPresent" class="selector-input place-holder-text" onchange={handleSelection}>
+                                <template iterator:it={pickUpCheckWillAllHeirsBePresentOptions}>
+                                    <option lwc:if={it.first} value={it.value.value} key={it.value.label}
+                                        class="place-holder-text">{it.value.label}</option>
+                                    <option lwc:else value={it.value.value} key={it.value.label} class="blue-text">
+                                        {it.value.label}</option>
+                                </template>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- If Not All Heir Will Be Present -->
+                    <div class={nonPresentHeirOptionsClass}>
+                        <template lwc:if={showNonPresentHeirOptions}>
+                            <div class="multi-checkbox-section">
+                                <span>
+                                    Where is located the heir that can't be present at the moment of 
+                                    picking-up the check? (Select all that apply)
+                                </span>
+        
+                                <template for:each={nonPresentHeirLocationOptions} for:item="checkBoxOption">
+                                    <div key={checkBoxOption.value} class="multi-checkbox-container">
+                                        <input type="checkbox" name="pickUpCheckNonPresentHeirLocationOptions" value={checkBoxOption.value} onchange={handleCheckbox}>
+                                        <label for="pickUpCheckNonPresentHeirLocationOptions">{checkBoxOption.label}</label>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+
+                    <div class={heirLocationRenderingStatusPRClass}>
+                        <template lwc:if={showAffidavitPowerOfAttorneyPRAuthorizationDocumentUpload}>
+                            <div class="file-input-section">
+                                <div class="file-input-container">
+                                    <p>
+                                        Affidavit or Power of Attorney issued in Puerto Rico authorizing a third party to receive, 
+                                        endorse and/or exchange check because of the transaction
+                                    </p>
+        
+                                    <!-- Hidden file input without using id -->
+                                    <input class="file-input" required type="file" accept=".pdf"
+                                        name="affidavitPowerOfAttorneyPRCheckAuthorizationDocument"
+                                        data-file-input="affidavitPowerOfAttorneyPRCheckAuthorizationDocument" onchange={handleFileChange}>
+        
+                                    <!-- Label now triggers the file input programmatically -->
+                                    <label class="upload-button" data-name="affidavitPowerOfAttorneyPRCheckAuthorizationDocument"
+                                        onclick={triggerFileUpload}>Upload Document</label>
+                                    <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                                    <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    
+                    <div class={heirLocationRenderingStatusUSClass}>
+                        <template lwc:if={showAffidavitPowerOfAttorneyUSClerkCertificateDocumentUpload}>
+                            <div class="file-input-section">
+                                <div class="file-input-container">
+                                    <p>
+                                        Affidavit or Power of Attorney issued in United States and a Country Clerk Certificate from issuance state
+                                    </p>
+        
+                                    <!-- Hidden file input without using id -->
+                                    <input class="file-input" required type="file" accept=".pdf"
+                                        name="affidavitPowerOfAttorneyUSClerkCertificateDocument"
+                                        data-file-input="affidavitPowerOfAttorneyUSClerkCertificateDocument" onchange={handleFileChange}>
+        
+                                    <!-- Label now triggers the file input programmatically -->
+                                    <label class="upload-button" data-name="affidavitPowerOfAttorneyUSClerkCertificateDocument"
+                                        onclick={triggerFileUpload}>Upload Document</label>
+                                    <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                                    <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class={heirLocationRenderingStatusForeignCountryClass}>
+                        <template lwc:if={showApostilleIssuanceCountryDocumentUpload}>
+                            <div class="file-input-section">
+                                <div class="file-input-container">
+                                    <p>
+                                        Apostille (note or explanatory letter) from the issuance country
+                                    </p>
+        
+                                    <!-- Hidden file input without using id -->
+                                    <input class="file-input" required type="file" accept=".pdf"
+                                        name="apostilleIssuanceCountryDocument"
+                                        data-file-input="apostilleIssuanceCountryDocument" onchange={handleFileChange}>
+        
+                                    <!-- Label now triggers the file input programmatically -->
+                                    <label class="upload-button" data-name="apostilleIssuanceCountryDocument"
+                                        onclick={triggerFileUpload}>Upload Document</label>
+                                    <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                                    <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class={heirLocationRenderingStatusMilitaryClass}>
+                        <template lwc:if={showMilitaryDocumentUpload}>
+                            <div class="file-input-section">
+                                <div class="file-input-container">
+                                    <p>
+                                        Military Power
+                                    </p>
+        
+                                    <!-- Hidden file input without using id -->
+                                    <input class="file-input" required type="file" accept=".pdf"
+                                        name="militaryPowerDocument"
+                                        data-file-input="militaryPowerDocument" onchange={handleFileChange}>
+        
+                                    <!-- Label now triggers the file input programmatically -->
+                                    <label class="upload-button" data-name="militaryPowerDocument"
+                                        onclick={triggerFileUpload}>Upload Document</label>
+                                    <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
+                                    <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
             </div>
             <!-- Account Balance More Than 15k? -->
             <div class="selector-input-section">
                 <div class="selector-input-container-row">
-                    <span>Is the sum of all account balances at the death date was greater than$15K?</span>
-                    <select name="greaterThan15k" class="selector-input" onchange={handleSelector}>
-                        <template for:each={greaterThan15kOptions} for:item="option">
-                            <option value={option.value} key={option.label}>{option.label}</option>
+                    <span>Is the sum of all account balances at the death date was greater than $15K?</span>
+                    <select name="greaterThan15k" class="selector-input place-holder-text" onchange={handleSelection}>
+                        <template iterator:it={greaterThan15kOptions}>
+                            <option lwc:if={it.first} value={it.value.value} key={it.value.label}
+                                class="place-holder-text">{it.value.label}</option>
+                            <option lwc:else value={it.value.value} key={it.value.label} class="blue-text">
+                                {it.value.label}</option>
                         </template>
                     </select>
                 </div>
             </div>
-            <div class="input-section"></div>
-            <div class="input-section"></div>
+            <div class={greaterThan15kMessageClass}>
+
+                <!-- If No Show This Message -->
+
+                <p class="message-text" if:true={showGreaterThan15kSelectionNoMessage}>
+                    <b>
+                        <i>
+                            If the disbursement amount is greater than $15,000 a
+                            Certificate of Release of Tax Lien will be required.
+                        </i>
+                    </b>
+                </p>
+
+                <!-- If Dont Know Show This Message -->
+
+                <div if:true={showGreaterThan15kSelectionDontKnowMessage}>
+                    <p class="message-text">
+                        <b>
+                            <i>
+                                If the balance at the date of death a Certificate of Release
+                                of Tax Lien with the Estate Tax Return will be required and
+                                will need submit a new request. We recommend that you request
+                                a certification of bank relationship.
+                            </i>
+                        </b>
+                    </p>
+                    <br />
+                    <p class="message-text">
+                        <a href="https://www.popular.com/processing-estate/">
+                            <b>Click here to learn how to request certification.</b>
+                        </a>
+                    </p>
+                </div>
+
+            </div>
         </div>
     </div>
 </template>
