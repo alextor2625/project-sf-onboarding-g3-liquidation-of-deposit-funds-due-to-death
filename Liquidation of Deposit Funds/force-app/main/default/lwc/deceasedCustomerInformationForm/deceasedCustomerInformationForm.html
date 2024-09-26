@@ -1,19 +1,19 @@
 <template>
     <div class="form-container">
         <div class="content">
-            <div class="title">
+            <div class="title light-blue-text">
                 <h1><b>Deceased customer information</b>:</h1>
             </div>
             <div class="input-section">
                 <div class="input-container">
                     <label for="firstName">First Name</label>
-                    <input required type="text" name="firstName" placeholder="First Name"
+                    <input required type="text" name="firstName" maxlength="50" placeholder="First Name"
                         value={deceasedCustomerInformationData.firstName} onchange={handleChange}>
                     <p lwc:if={firstNameErrorMessage} class="error-message">{firstNameErrorMessage}</p>    
                 </div>
                 <div class="input-container">
                     <label for="lastName">Last Name</label>
-                    <input required type="text" name="lastName" placeholder="Last Name"
+                    <input required type="text" name="lastName" maxlength="50" placeholder="Last Name"
                         value={deceasedCustomerInformationData.lastName} onchange={handleChange}>
                 <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
                 </div>
@@ -21,7 +21,7 @@
             <div class="input-section">
                 <div class="input-container">
                     <label for="ssn">Social Security Number</label>
-                    <input required type="text" name="ssn" placeholder="Social Security Number"
+                    <input required type="text" name="ssn" maxlength="9" placeholder="Social Security Number"
                         value={deceasedCustomerInformationData.ssn} onchange={handleChange}>
                 <p lwc:if={ssnErrorMessage} class="error-message">{ssnErrorMessage}</p>
                 </div>

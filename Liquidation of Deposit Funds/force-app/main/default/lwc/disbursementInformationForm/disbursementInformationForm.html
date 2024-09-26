@@ -1,7 +1,9 @@
 <template>
     <div class="form-container">
+        <!-- <div class="banner">
+        </div> -->
         <div class="content">
-            <div class="title">
+            <div class="title light-blue-text">
                 <h1><b>Disbursement Information</b>:</h1>
             </div>
             <div class="input-section">
@@ -24,12 +26,12 @@
                     <div class="input-section">
                         <div class="input-container">
                             <label for="accountHolderName">Account Holder Name</label>
-                            <input type="text" placeholder="Account Holder Name" name="accountHolderName"
+                            <input type="text" placeholder="Account Holder Name" maxlength="50" name="accountHolderName"
                                 value={disbursementInformationData.accountHolderName} onchange={handleChange}>
                         </div>
                         <div class="input-container">
                             <label for="disbursementAccountNumber">Account Number</label>
-                            <input type="text" placeholder="Account Number" name="disbursementAccountNumber"
+                            <input type="text" placeholder="Account Number" maxlength="9" name="disbursementAccountNumber"
                                 value={disbursementInformationData.disbursementAccountNumber} onchange={handleChange}>
                         </div>
                     </div>
@@ -230,7 +232,7 @@
                 <p class="message-text" if:true={showGreaterThan15kSelectionNoMessage}>
                     <b>
                         <i>
-                            If the disbursement amount is greater than $15,000 a
+                            If the disbursement amount is greater than $15,000 upon death, a
                             Certificate of Release of Tax Lien will be required.
                         </i>
                     </b>
@@ -242,19 +244,18 @@
                     <p class="message-text">
                         <b>
                             <i>
-                                If the balance at the date of death a Certificate of Release
-                                of Tax Lien with the Estate Tax Return will be required and
-                                will need submit a new request. We recommend that you request
-                                a certification of bank relationship.
+                                If the balance at the date of death is greater than $15K, a Certificate of Release
+                                of Tax Lien with the Estate Tax Return will be required and will need submit a new 
+                                request. We recommend that you request a certification of bank relationship. Click <a href="https://www.popular.com/processing-estate/"> <b>here</b> </a> to learn how 
+                                to request certification.
                             </i>
                         </b>
                     </p>
-                    <br />
-                    <p class="message-text">
+                    <!-- <p class="message-text">
                         <a href="https://www.popular.com/processing-estate/">
                             <b>Click here to learn how to request certification.</b>
                         </a>
-                    </p>
+                    </p> -->
                 </div>
 
             </div>

@@ -16,8 +16,10 @@
 
 .wrapper {
     padding: 25px;
-    border: 3.5px solid var(--gray);
-    border-radius: 100px;
+    /* border: 3.5px solid var(--gray); */
+    /* border-radius: 100px; */
+    box-shadow: 0px 0px 20px 0.5px var(--gray);
+    /* border-radius: 30px; */
     /* margin: 20px; */
     /* width: 100%; */
     display: flex;

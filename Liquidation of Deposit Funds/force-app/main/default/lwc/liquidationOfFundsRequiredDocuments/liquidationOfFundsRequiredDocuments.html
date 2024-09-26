@@ -5,26 +5,28 @@
                 <div class="content">
                     <p>You can request a liquidation of funds, it is important that you have these documents before
                         proceeding</p>
-                    <ul class="bullet-list">
+                    <ol class="slds-list_ordered">
                         <li>Death Certificate (original or copy)</li>
                         <li>
                             Will documents:<br />
-                            <b> Will in Puerto Rico:</b><br />
-                            <ul class="bullet-list">
-                                <li>Will and the certification from the Registro de Poderes y Testamentos</li>
-                                <li>Resolution of Testamentary Letters in case of Executor representing the Estate,
-                                    according to the Testament</li>
-                            </ul>
-                            <b> Will in USA</b><br />
-                            <ul class="bullet-list">
-                                <li>Last Will and Testament</li>
-                                <li>Letters of Administration granted by Surrogate of Probate Court or substitute
-                                    document, in case of Small Estate Procedure</li>
-                            </ul>
-                            <b> Without Will</b><br />
-                            <ul class="bullet-list">
-                                <li>Resolution of Declaration of Heirs</li>
-                            </ul>
+                            <div class="indent">
+                                <b> Will in Puerto Rico:</b><br />
+                                <ul class="slds-list_dotted">
+                                    <li>Will and the certification from the Registro de Poderes y Testamentos</li>
+                                    <li>Resolution of Testamentary Letters in case of Executor representing the Estate,
+                                        according to the Testament</li>
+                                </ul>
+                                <b> Will in USA</b><br />
+                                <ul class="slds-list_dotted">
+                                    <li>Last Will and Testament</li>
+                                    <li>Letters of Administration granted by Surrogate of Probate Court or substitute
+                                        document, in case of Small Estate Procedure</li>
+                                </ul>
+                                <b> Without Will</b><br />
+                                <ul class="slds-list_dotted">
+                                    <li>Resolution of Declaration of Heirs</li>
+                                </ul>
+                            </div>
                         </li>
                         <li>If the disbursement amount is greater than $15,000 Certificate of Release of Tax Lien with
                             the Estate Tax Return that includes the Detalles de Bienes addendum</li>
@@ -33,14 +35,16 @@
                         <li>If you are picking up the check in a Popular branch and not all of the heirs will be
                             present, you will need the following documents depending on the location of the heir that
                             will not be present:</li>
-                        <li><b>Active Duty in US Armed Forces</b>, Military Power</li>
-                        <li><b>Foreign Country</b>, Apostille (note or explanatory letter) from the issuing country</li>
-                        <li><b>Puerto Rico</b>, Affidavit or Power of Attorney issued in Puerto Rico authorizing a third
-                            party to receive, endorse, and/or exchange check because of the transaction</li>
-                        <li><b>United States</b>, Affidavit or Power of Attorney issued in United States and a Country
-                            Clerk Certificate from the issuing state.</li>
-                    </ul>
-
+                        <ul class="bullet-list-checkmark">
+                            <li><b>Active Duty in US Armed Forces</b>, Military Power</li>
+                            <li><b>Foreign Country</b>, Apostille (note or explanatory letter) from the issuing country</li>
+                            <li><b>Puerto Rico</b>, Affidavit or Power of Attorney issued in Puerto Rico authorizing a third
+                                party to receive, endorse, and/or exchange check because of the transaction</li>
+                            <li><b>United States</b>, Affidavit or Power of Attorney issued in United States and a Country
+                                Clerk Certificate from the issuing state.</li>
+                        </ul>
+                    </ol>
+                    <br/>
                     <div class="form-container">
                         <p class="required-documents-question"><b>Do you have all the documents required, detailed
                                 above?</b></p>
@@ -56,7 +60,7 @@
                     <!-- Warning message and button with fade-in/fade-out -->
                     <div class={warningClass}>
                         <template lwc:if={showMessage}>
-                            <p class="red-text message" style="margin-top: 10px;">{message}</p>
+                            <p class="blue-text message" style="margin-top: 10px;"><b>{message}</b></p>
                         </template>
                     </div>
                     <div class={buttonContainerClass}>

@@ -29,11 +29,13 @@
 }
 
 .wrapper {
-    border: 2px solid var(--gray);
+    /* border: 3.5px solid var(--gray); */
     /* border-radius: 30px; */
-    border-radius: 100px;
+    box-shadow: 0px 0px 20px 0.5px var(--gray);
+
+    /* border-radius: 100px; */
     width: 100%;
-    height: 60rem;
+    height: 63rem;
     /* max-height: 60rem; */
     max-height: 100%;
     display: flex;
@@ -44,9 +46,11 @@
 }
 
 .wrapper-selected-no {
-    border: 2px solid var(--gray);
+    /* border: 3.5px solid var(--gray); */
+    box-shadow: 0px 0px 20px 0.5px var(--gray);
+
     /* border-radius: 30px; */
-    border-radius: 100px;
+    /* border-radius: 100px; */
     width: 100%;
     height: 65rem;
     /* max-height: 65rem; */
@@ -59,9 +63,10 @@
 }
 
 .wrapper-selected-yes {
-    border: 2px solid var(--gray);
+    /* border: 3.5px solid var(--gray); */
+    box-shadow: 0px 0px 20px 0.5px var(--gray);
     /* border-radius: 30px; */
-    border-radius: 100px;        
+    /* border-radius: 100px;         */
     width: 100%;
     height: 68rem;
     /* max-height: 68rem; */
@@ -87,13 +92,27 @@
     display: list-item;
 }
 
+ul.bullet-list-checkmark{
+    list-style-type: none;
+    padding-left: 20px;
+}
+ul.bullet-list-checkmark li::before {
+    content: '✓'; /* You can change this to a different checkmark character */
+    color: var(--popular-blue); /* Customize the color of the checkmark */
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
 .content {
     color: var(--popular-blue);
     width: 37rem;
 }
-
+.indent{
+    padding-left: 20px;
+}
 .required-documents-question {
     width: 20rem;
+    margin-top: 10px;
 }
 
 .custom-btn {

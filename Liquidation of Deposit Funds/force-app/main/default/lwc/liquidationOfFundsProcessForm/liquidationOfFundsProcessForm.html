@@ -3,22 +3,22 @@
         <div class="card">
             <div class="wrapper">
                 <div class="content">
-                    <div>
+                    <div class="separator">
                         <c-deceased-customer-information-form 
                             deceased-customer-information-data={deceasedCustomerInformationData} 
                             ondeccustinfodatachange={handleDataChange}></c-deceased-customer-information-form>
                     </div>
-                    <div> 
+                    <div class="separator"> 
                         <c-requestor-information-form 
                             requestor-information-data={requestorInformationData} 
                             onrequestorinformationdatachange={handleDataChange}></c-requestor-information-form>
                     </div>
-                    <div>
+                    <div class="separator">
                         <c-disbursement-information-form 
                             disbursement-information-data={disbursementInformationData} 
                             ondisbursementinformationdatachange={handleDataChange}></c-disbursement-information-form>
                     </div>
-                    <div>
+                    <div class="separator">
                         <c-additional-required-documents-form  
                             show-greater-than15k-additional-document-upload={showGreaterThan15kAdditionalDocumentUpload}
                             additional-required-documents-data={additionalRequiredDocumentsData} 
@@ -31,6 +31,22 @@
                         <div class="slds-modal__container">
                         </div>
                     </div> -->
+                    <div>
+                        <div class="legal-section">
+                            <div class="legal-content">
+                                <p> Legal, legal, legal, legal, legal, legal, lega, legal, legal, legal, legal, legal, legal, legal
+                                    Legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal
+                                    Legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal, legal
+                                </p>
+                                <div class="input-section separator">
+                                    <div class="checkbox-input-container">
+                                        <input type="checkbox" name="legalAgreementCheckbox" onchange={handleCheckbox}/>
+                                        <label for="legalAgreementCheckbox">I have read and accept the legal notification above.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="button-container-center">
                         <a class={submitButtonClass} onclick={handleSubmit}>Submit</a>
                     </div>

@@ -1,5 +1,8 @@
 :host {
     --popular-blue: rgb(9, 28, 90);
+    --popular-blue-light: rgb(0,  85, 150);
+    --popular-blue-lighter: rgb(0, 169, 224);
+    --popular-blue-very-light: rgb(164, 215, 244);
     --gray: rgb(181, 182, 186);
     --place-holder-gray: #666666;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,10 +13,21 @@
     display: flex;
     justify-content: center;
 }
-
+.separator{
+    padding: 20px 0;
+}
 
 .blue-text {
-    color: var(--popular-blue);
+    color: var(--popular-blue) !important;
+}
+.light-blue-text {
+    color: var(--popular-blue-light) !important;
+}
+.lighter-blue-text {
+    color: var(--popular-blue-lighter) !important;
+}
+.very-light-blue-text {
+    color: var(--popular-blue-very-light) !important;
 }
 
 .red-text {
@@ -25,7 +39,26 @@
     justify-content: center;
     align-items: center;
 }
+.legal-section{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    /* margin: 0 3rem 1rem 3rem; */
+}
+.legal-content{
+    color: var(--popular-blue);
+    width: 33rem;
+}
 
+/* .legal-content p{
+    word-wrap: break-word;
+    white-space: normal;
+} */
+/* .legal-text{
+    display: flex;
+    flex-wrap: wrap;
+} */
 .selector {
     border: 1.5px solid;
     border-radius: 7px;
@@ -35,11 +68,30 @@
     text-align: center;
 }
 
+input[type="checkbox"] {
+    border: 1.5px solid;
+    border-radius: 7px;
+    border-color: var(--gray);
+    color: var(--popular-blue);
+    /* padding: 20px; */
+    width: 24px;
+    height: 24px;
+    margin: 0 1rem 0 3rem;
+    background-color: white;
+}
+
+.checkbox-input-container{
+    display: flex;
+}
+
 .wrapper {
-    border: 3.5px solid var(--gray);
-    border-radius: 100px;
+    /* border: 3.5px solid var(--gray); */
+    box-shadow: 0px 0px 20px 0.5px var(--gray);
+    /* border-radius: 100px; */
     width: 45rem;
     height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     min-width: 45rem;
     max-height: 100%;
     display: flex;
@@ -96,7 +148,7 @@
 .recaptcha-container {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin-top: 10px;
 }
 
 .recaptcha-container iframe {

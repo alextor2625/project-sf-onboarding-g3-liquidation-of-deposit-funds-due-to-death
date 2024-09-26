@@ -1,5 +1,5 @@
 <template>
-    <lightning-card title="My Cases" icon-name="standard:case">
+    <lightning-card title={cardTitle} icon-name="standard:case">
         <template lwc:if={cases}>
 
             <div class="slds-scrollable_x">
@@ -7,13 +7,13 @@
                     <thead>
                         <tr class="slds-text-heading_small">
                             <th scope="col">
-                                <div class="slds-truncate" title="Case Number">Case Number</div>
+                                <div class="slds-truncate" title="Case Number">{tH1}</div>
                             </th>
                             <th scope="col">
-                                <div class="slds-truncate" title="Deceased Member">Deceased Member</div>
+                                <div class="slds-truncate" title="Deceased Member">{tH2}</div>
                             </th>
                             <th scope="col">
-                                <div class="slds-truncate" title="Created Date">Created Date</div>
+                                <div class="slds-truncate" title="Created Date">{tH3}</div>
                             </th>
                         </tr>
                     </thead>

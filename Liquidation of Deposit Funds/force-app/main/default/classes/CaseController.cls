@@ -1,6 +1,6 @@
 public with sharing class CaseController {
     @AuraEnabled
-    public static void insertCase(Case newCase, Map<String, String> pdfBlobs) {
+    public static String insertCase(Case newCase, Map<String, String> pdfBlobs) {
         try {
             // Insert the case
             // for(String key: newCaseObj.keySet()){
@@ -12,7 +12,7 @@ public with sharing class CaseController {
             insert newCase;
             Id caseId;
             // caseId = insertCase.getId();
-            Case createdCase = [SELECT Id FROM Case where AccountId= :newCase.AccountId ORDER BY CreatedDate DESC LIMIT 1];
+            Case createdCase = [SELECT Id, CaseNumber FROM Case where AccountId= :newCase.AccountId ORDER BY CreatedDate DESC LIMIT 1];
             caseId = createdCase.Id;
             
             system.debug('Case ID: ' + caseId);
@@ -40,7 +40,7 @@ public with sharing class CaseController {
 
             // Insert all the attachments
             insert attachmentList;
-
+            return String.valueOf(createdCase.CaseNumber);
         } catch (Exception e) {
             System.debug('Exception: ' + e);
             throw new AuraHandledException(e.getMessage());

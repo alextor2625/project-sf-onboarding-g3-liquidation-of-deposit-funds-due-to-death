@@ -1007,7 +1007,7 @@ export default class DisbursementInformationForm extends LightningElement {
             const fileInputElement = [...fileInputElements].find(elem => elem.dataset.name == event.target.name)
             // console.log(fileInputElement);
             fileInputElement.textContent = file ? fileName : 'Upload Document';
-            fileInputElement.style.color = file ? 'red' : '';
+            fileInputElement.style.color = file ? 'var(--popular-blue)' : '';
             const name = event.target.name;
             this.disbursementInformationData = { ...this.disbursementInformationData, [name]: file };
             // // Dispatch the event with updated data

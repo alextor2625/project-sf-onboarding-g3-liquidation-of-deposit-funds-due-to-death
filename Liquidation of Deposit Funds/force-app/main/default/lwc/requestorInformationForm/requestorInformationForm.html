@@ -1,19 +1,21 @@
 <template>
     <div class="form-container">
+        <!-- <div class="banner">
+        </div> -->
         <div class="content">
-            <div class="title">
+            <div class="title light-blue-text">
                 <h1><b>Requestor Information</b>:</h1>
             </div>
             <div class="input-section">
                 <div class="input-container">
                     <label for="firstName">First Name</label>
                     <input required type="text" name="firstName" placeholder="First Name"
-                        value={requestorInformationData.firstName} onchange={handleChange} disabled>
+                        value={requestorInformationData.firstName} maxlength="50" onchange={handleChange} disabled>
                     <p lwc:if={firstNameErrorMessage} class="error-message">{firstNameErrorMessage}</p>    
                 </div>
                 <div class="input-container">
                     <label for="lastName">Last Name</label>
-                    <input required type="text" name="lastName" placeholder="Last Name"
+                    <input required type="text" name="lastName" maxlength="50" placeholder="Last Name"
                         value={requestorInformationData.lastName} onchange={handleChange} disabled>
                 <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
                 </div>
@@ -44,7 +46,7 @@
                 </div>
                 <div class="input-container">
                     <label for="otherPhoneNumber">Other Phone Number</label>
-                    <input required type="tel" placeholder="Other Phone Number" name="otherPhoneNumber" value={requestorInformationData.otherPhoneNumber} onchange={handleChange}>
+                    <input required type="tel" placeholder="Other Phone Number" maxlength="10" name="otherPhoneNumber" value={requestorInformationData.otherPhoneNumber} onchange={handleChange}>
                 </div>
             </div>
         </div>

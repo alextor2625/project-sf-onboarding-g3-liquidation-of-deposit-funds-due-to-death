@@ -80,7 +80,7 @@ export default class DeceasedCustomerInformationForm extends LightningElement {
             const fileName = file.name;
             const fileInputElement = this.template.querySelector('.upload-button');
             fileInputElement.textContent = file ? fileName : 'Upload Death Certificate'; 
-            fileInputElement.style.color = file ? 'red' : '';
+            fileInputElement.style.color = file ? 'var(--popular-blue)' : '';
             const name = event.target.name;
             console.log('FILE:', JSON.stringify(file.name), 'child component');
             // file.name = "Death-Certificate";

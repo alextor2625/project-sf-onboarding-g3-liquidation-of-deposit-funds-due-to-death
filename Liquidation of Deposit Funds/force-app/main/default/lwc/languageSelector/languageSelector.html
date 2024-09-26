@@ -1,0 +1,15 @@
+<template>
+    <div class="container">
+        <div class="wraper">
+            <lightning-icon icon-name='utility:world' alternative-text='world' size='small' title='world'></lightning-icon>
+            <lightning-combobox
+                label="Select Language"
+                value={selectedLanguage}
+                placeholder="Select Language"
+                options={languageOptions}
+                onchange={handleLanguageChange}
+                variant="label-hidden"
+            ></lightning-combobox>
+        </div>
+    </div>
+</template>
