@@ -1,389 +1,50 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import InfoLabel from '@salesforce/label/c.Disbursement_Info_1'
+import InfoLabel2 from '@salesforce/label/c.Disbursement_Info_2'
 
 export default class DisbursementInformationForm extends LightningElement {
-    greaterThan15kOptions = [
-        { label: 'Select Yes/No/Don\'t know', value: '' },
-        { label: 'Yes', value: 'yes' },
-        { label: 'No', value: 'no' },
-        { label: 'Don\'t know', value: 'don\'t know' },
-    ]
-    disbursementPreferenceOptions = [
-        { label: "Select Disbursement preference", value: '' },
-        { label: 'Account deposit', value: 'Account deposit' },
-        { label: 'Pick-up at branch', value: 'Pick-up at branch' }
-    ]
 
-    pickUpCheckWillAllHeirsBePresentOptions = [
-        { label: "Select Yes/No", value: '' },
-        { label: "Yes", value: 'yes' },
-        { label: "No", value: 'no' },
-    ]
+    @track infoLabel = {};
+    @track infoLabel2 = {};
+    @track greaterThan15kOptions;
+    @track disbursementPreferenceOptions;
+    @track pickUpCheckWillAllHeirsBePresentOptions;
+    @track nonPresentHeirLocationOptions;
+    
+    connectedCallback(){
+        this.infoLabel = JSON.parse(InfoLabel);
+        this.infoLabel2 = JSON.parse(InfoLabel2);
+
+        this.greaterThan15kOptions = [
+            { label: this.infoLabel2.t8, value: '' },
+            { label: this.infoLabel2.t9, value: 'yes' },
+            { label: 'No', value: 'no' },
+            { label: this.infoLabel2.t11, value: 'don\'t know' },
+        ]
+
+        this.disbursementPreferenceOptions = [
+            { label: this.infoLabel2.t12, value: '' },
+            { label: this.infoLabel2.t13, value: 'Account deposit' },
+            { label: this.infoLabel2.t14, value: 'Pick-up at branch' }
+        ]
+    
+        this.pickUpCheckWillAllHeirsBePresentOptions = [
+            { label: this.infoLabel2.t15, value: '' },
+            { label: this.infoLabel2.t9, value: 'yes' },
+            { label: "No", value: 'no' },
+        ]
+
+        this.nonPresentHeirLocationOptions = [
+            { label: this.infoLabel2.t16, value: "Active Duty in US Armed Forces" },
+            { label: "Puerto Rico", value: "Puerto Rico" },
+            { label: this.infoLabel2.t17, value: "Unites States" },
+            { label: "Foreign Country", value: "Foreign Country" },
+        ]
+
+    }
 
-    // townBranchOptionsJson = {
-    //     "San Juan": [
-    //         "Montehiedra",
 
-    //         "Mall Of San Juan",
-
-    //         "Walmart Parada 18",
-
-    //         "El Señorial Center",
-
-    //         "San Francisco",
-
-    //         "Galería Paseos",
-
-    //         "El Señorial Mall",
-
-    //         "Barbosa",
-
-    //         "Muñoz Rivera",
-
-    //         "Cupey Center",
-
-    //         "Reparto Metropolitano",
-
-    //         "San José",
-
-    //         "Centro Medico",
-
-    //         "Plaza Del Mercado",
-
-    //         "Universidad",
-
-    //         "Caparra Center",
-
-    //         "Plaza Las Américas",
-
-    //         "Popular Center",
-
-    //         "Condado Gallery",
-
-    //         "Altamira",
-
-    //         "Puerto Nuevo",
-
-    //         "Parada 22",
-
-    //         "Parada 34",
-
-    //         "Barrio Obrero",
-
-    //         "Valencia Park",
-
-    //         "Condado Centro",
-
-    //         "Calle Loíza",
-
-    //         "Parada 26",
-
-    //         "Miramar",
-
-    //         "San Juan Los Puertos",
-
-    //         "San Juan"
-
-    //     ],
-
-    //     "Cayey": [
-
-    //         "Walmart Cayey",
-
-    //         "Cayey Montellano"
-
-    //     ],
-
-    //     "Caguas": [
-
-    //         "Las Catalinas",
-
-    //         "Plaza Centro II",
-
-    //         "Plaza Los Prados",
-
-    //         "RFW Bairoa",
-
-    //         "Caguas Pueblo",
-
-    //         "Condadito",
-
-    //         "San Alfonso"
-
-    //     ],
-
-    //     "Cidra": ["Cidra"],
-
-    //     "Fajardo": ["Fajardo"],
-
-    //     "San Lorenzo": ["San Lorenzo"],
-
-    //     "Humacao": [
-
-    //         "Humacao Este",
-
-    //         "Palmas Del Mar",
-
-    //         "Humacao Palma Real"
-
-    //     ],
-
-    //     "Canóvanas": ["Canovanas Outlet"],
-
-    //     "Las Piedras": ["Las Piedras"],
-
-    //     "Gurabo": ["Gurabo"],
-
-    //     "Luquillo": ["Luquillo"],
-
-    //     "Yabucoa": ["Yabucoa"],
-
-    //     "Aibonito": ["Aibonito"],
-
-    //     "Rio Grande": [
-
-    //         "Plaza Del Yunque",
-
-    //         "Rio Grande Pueblo"
-
-    //     ],
-
-    //     "Barranquitas": ["Barranquitas"],
-
-    //     "Juncos": ["RFW Juncos"],
-
-    //     "Aguas Buenas": ["Aguas Buenas"],
-
-    //     "Naguabo": ["Naguabo"],
-
-    //     "Vieques": ["Vieques"],
-
-    //     "Ceiba": ["Ceiba"],
-
-    //     "Loíza": ["Loíza"],
-
-    //     "Maunabo": ["Maunabo"],
-
-    //     "Culebra": ["Culebra"],
-
-    //     "Bayamón": [
-
-    //         "Bayamón Center",
-
-    //         "Santa Rosa",
-
-    //         "Lomas Verdes",
-
-    //         "Bayamón Oeste",
-
-    //         "Plaza Del Sol",
-
-    //         "Rexville Town Center",
-
-    //         "Rio Hondo"
-
-    //     ],
-
-    //     "Vega Alta": ["Vega Alta"],
-
-    //     "Corozal": ["Corozal"],
-
-    //     "Barceloneta": [
-
-    //         "Cruce Davila",
-
-    //         "Barceloneta Prime Outlets"
-
-    //     ],
-
-    //     "Naranjito": ["El Mercado Plaza"],
-
-    //     "Hatillo": ["Hatillo"],
-
-    //     "Toa Baja": [
-
-    //         "Levittown",
-
-    //         "Toa Baja"
-
-    //     ],
-
-    //     "Arecibo": [
-
-    //         "Arecibo Highway",
-
-    //         "Arecibo San Luis",
-
-    //         "Arecibo Aeropuerto"
-
-    //     ],
-
-    //     "Utuado": ["Utuado"],
-
-    //     "Camuy": ["Camuy"],
-
-    //     "Orocovis": ["Orocovis"],
-
-    //     "Morovis": ["Morovis"],
-
-    //     "Manatí": [
-
-    //         "Manatí Popular Center",
-
-    //         "Econo Manatí"
-
-    //     ],
-
-    //     "Toa Alta": ["Toa Alta"],
-
-    //     "Ciales": ["Ciales"],
-
-    //     "Comerio": ["Comerio"],
-
-    //     "Florida": ["Florida"],
-
-    //     "Dorado": ["Plaza Dorada"],
-
-    //     "Carolina": [
-
-    //         "Carolina Highway",
-
-    //         "Parque Escorial",
-
-    //         "Plaza Carolina",
-
-    //         "Los Colobos Shopping Center",
-
-    //         "Campo Rico",
-
-    //         "Isla Verde",
-
-    //         "Ave. 65 Infantería Shopping Center",
-
-    //         "Aeropuerto"
-
-    //     ],
-
-    //     "Trujillo Alto": [
-
-    //         "Trujillo Alto Shopping",
-
-    //         "Trujillo Alto"
-
-    //     ],
-
-    //     "Guaynabo": [
-
-    //         "Plaza Guaynabo",
-
-    //         "Guaynabo Las Cumbres",
-
-    //         "San Patricio Gallery",
-
-    //         "San Patricio Mall",
-
-    //         "Buchanan",
-
-    //         "Exp Garden Hills"
-
-    //     ],
-
-    //     "Ponce": [
-
-    //         "Plaza Del Caribe",
-
-    //         "Centro Del Sur",
-
-    //         "Ponce Towne Center Norte",
-
-    //         "Ponce Towne Center Sur",
-
-    //         "Ponce Rambla",
-
-    //         "Ponce El Monte",
-
-    //         "Ponce Plaza"
-
-    //     ],
-
-    //     "Juana Díaz": ["Juana Díaz"],
-
-    //     "Coamo": ["Coamo"],
-
-    //     "Guayanilla": ["Guayanilla"],
-
-    //     "Arroyo": ["Arroyo"],
-
-    //     "Peñuelas": ["Peñuelas"],
-
-    //     "Jayuya": ["Jayuya"],
-
-    //     "Patillas": ["Patillas"],
-
-    //     "Adjuntas": ["Adjuntas"],
-
-    //     "Villalba": ["Villalba"],
-
-    //     "Aguadilla": [
-
-    //         "Aguadilla Sur",
-
-    //         "Aguadilla Mall",
-
-    //         "Ramey"
-
-    //     ],
-
-    //     "Isabela": ["Isabela"],
-
-    //     "Sabana Grande": ["Sabana Grande"],
-
-    //     "Mayagüez": [
-
-    //         "Mayagüez Mall Centro",
-
-    //         "Mayagüez Mall Sur",
-
-    //         "Mayagüez Suau",
-
-    //         "RUM",
-
-    //         "Mendez Vigo"
-
-    //     ],
-
-    //     "Cabo Rojo": ["Cabo Rojo La Hacienda"],
-
-    //     "Moca": ["Moca"],
-
-    //     "Añasco": ["Añasco"],
-
-    //     "San Germán": ["San Germán Plaza Del Oeste"],
-
-    //     "Lares": ["Lares"],
-
-    //     "Aguada": ["Aguada"],
-
-    //     "Quebradillas": ["Quebradillas"],
-
-    //     "San Sebastián": ["San Sebastián"],
-
-    //     "Lajas": ["Lajas"],
-
-    //     "Rincón": ["Rincón"],
-
-    //     "Hormigueros": ["Hormigueros"],
-
-    //     "Las Marías": ["Las Marías"],
-
-    //     "Maricao": ["Maricao"],
-
-    //     "Santa Isabel": ["Santa Isabel"],
-    //     "Guayama": ["Guayama"],
-    //     "Salinas": ["Salinas"],
-    //     "Vega Baja": ["Vega Baja"]
-
-    // }
     townBranchOptionsJson = {
         "Adjuntas": ["Adjuntas"],
         "Aguas Buenas": ["Aguas Buenas"],
@@ -572,12 +233,7 @@ export default class DisbursementInformationForm extends LightningElement {
     }
     
     showNonPresentHeirOptions = false;
-    nonPresentHeirLocationOptions = [
-        { label: "Active Duty in US Armed Forces", value: "Active Duty in US Armed Forces" },
-        { label: "Puerto Rico", value: "Puerto Rico" },
-        { label: "Unites States", value: "Unites States" },
-        { label: "Foreign Country", value: "Foreign Country" },
-    ]
+    
     branchTownSelection = '';
     disableBranchSelector = true;
     get branchOptions() {
@@ -669,96 +325,14 @@ export default class DisbursementInformationForm extends LightningElement {
         ]
         
     }
-    // get branchTownOptions() {
-    //     return [
-    //         { label: "Select Town", value: "" },
-    //         { label: "San Juan", value: "San Juan" },
-    //         { label: "Cayey", value: "Cayey" },
-    //         { label: "Caguas", value: "Caguas" },
-    //         { label: "Cidra", value: "Cidra" },
-    //         { label: "Fajardo", value: "Fajardo" },
-    //         { label: "San Lorenzo", value: "San Lorenzo" },
-    //         { label: "Humacao", value: "Humacao" },
-    //         { label: "Canóvanas", value: "Canóvanas" },
-    //         { label: "Las Piedras", value: "Las Piedras" },
-    //         { label: "Gurabo", value: "Gurabo" },
-    //         { label: "Luquillo", value: "Luquillo" },
-    //         { label: "Yabucoa", value: "Yabucoa" },
-    //         { label: "Aibonito", value: "Aibonito" },
-    //         { label: "Rio Grande", value: "Rio Grande" },
-    //         { label: "Barranquitas", value: "Barranquitas" },
-    //         { label: "Juncos", value: "Juncos" },
-    //         { label: "Aguas Buenas", value: "Aguas Buenas" },
-    //         { label: "Naguabo", value: "Naguabo" },
-    //         { label: "Vieques", value: "Vieques" },
-    //         { label: "Ceiba", value: "Ceiba" },
-    //         { label: "Loíza", value: "Loíza" },
-    //         { label: "Maunabo", value: "Maunabo" },
-    //         { label: "Culebra", value: "Culebra" },
-    //         { label: "Bayamón", value: "Bayamón" },
-    //         { label: "Vega Alta", value: "Vega Alta" },
-    //         { label: "Corozal", value: "Corozal" },
-    //         { label: "Barceloneta", value: "Barceloneta" },
-    //         { label: "Naranjito", value: "Naranjito" },
-    //         { label: "Hatillo", value: "Hatillo" },
-    //         { label: "Toa Baja", value: "Toa Baja" },
-    //         { label: "Arecibo", value: "Arecibo" },
-    //         { label: "Utuado", value: "Utuado" },
-    //         { label: "Camuy", value: "Camuy" },
-    //         { label: "Orocovis", value: "Orocovis" },
-    //         { label: "Morovis", value: "Morovis" },
-    //         { label: "Manatí", value: "Manatí" },
-    //         { label: "Toa Alta", value: "Toa Alta" },
-    //         { label: "Ciales", value: "Ciales" },
-    //         { label: "Comerio", value: "Comerio" },
-    //         { label: "Florida", value: "Florida" },
-    //         { label: "Dorado", value: "Dorado" },
-    //         { label: "Carolina", value: "Carolina" },
-    //         { label: "Trujillo Alto", value: "Trujillo Alto" },
-    //         { label: "Guaynabo", value: "Guaynabo" },
-    //         { label: "Ponce", value: "Ponce" },
-    //         { label: "Juana Díaz", value: "Juana Díaz" },
-    //         { label: "Coamo", value: "Coamo" },
-    //         { label: "Guayanilla", value: "Guayanilla" },
-    //         { label: "Arroyo", value: "Arroyo" },
-    //         { label: "Peñuelas", value: "Peñuelas" },
-    //         { label: "Jayuya", value: "Jayuya" },
-    //         { label: "Patillas", value: "Patillas" },
-    //         { label: "Adjuntas", value: "Adjuntas" },
-    //         { label: "Villalba", value: "Villalba" },
-    //         { label: "Aguadilla", value: "Aguadilla" },
-    //         { label: "Isabela", value: "Isabela" },
-    //         { label: "Sabana Grande", value: "Sabana Grande" },
-    //         { label: "Mayagüez", value: "Mayagüez" },
-    //         { label: "Cabo Rojo", value: "Cabo Rojo" },
-    //         { label: "Moca", value: "Moca" },
-    //         { label: "Añasco", value: "Añasco" },
-    //         { label: "San Germán", value: "San Germán" },
-    //         { label: "Lares", value: "Lares" },
-    //         { label: "Aguada", value: "Aguada" },
-    //         { label: "Quebradillas", value: "Quebradillas" },
-    //         { label: "San Sebastián", value: "San Sebastián" },
-    //         { label: "Lajas", value: "Lajas" },
-    //         { label: "Rincón", value: "Rincón" },
-    //         { label: "Hormigueros", value: "Hormigueros" },
-    //         { label: "Las Marías", value: "Las Marías" },
-    //         { label: "Maricao", value: "Maricao" },
-    //         { label: "Santa Isabel", value: "Santa Isabel" },
-    //         { label: "Guayama", value: "Guayama" },
-    //         { label: "Salinas", value: "Salinas" },
-    //         { label: "Vega Baja", value: "Vega Baja" },
-    //     ]
-    // }
+    
 
     pHClass(name) {
         console.log("ChangingClass")
         const elem = this.template.querySelector(`[name=${name}]`);
         elem.value !== '' ? elem.classList.remove('place-holder-text') : elem.classList.add('place-holder-text')
     }
-    // connectedCallback(){
-    //     console.log(this.branchTownSelection)
-    //     console.log(JSON.stringify(this.branchOptions))
-    // }
+   
 
     @api disbursementInformationData;
     showAccountDepositSection = false;

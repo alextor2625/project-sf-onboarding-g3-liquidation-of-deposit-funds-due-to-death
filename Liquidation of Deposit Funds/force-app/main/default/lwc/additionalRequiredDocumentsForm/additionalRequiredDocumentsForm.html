@@ -2,13 +2,13 @@
     <div class="form-container">
         <div class="content">
             <div class="title light-blue-text">
-                <h1><b>Additional Required Documents</b>:</h1>
+                <h1><b>{infoLabel.t1}</b>:</h1>
             </div>
 
             <!-- Is there a will? -->
             <div class="selector-input-section">
                 <div class="selector-input-container-row">
-                    <span>Is there a Will?</span>
+                    <span>{infoLabel.t2}</span>
                     <select name="isThereAWill" class="selector-input place-holder-text" onchange={handleSelection}>
                         <template iterator:it={isThereAWillOptions}>
                             <option lwc:if={it.first} value={it.value.value} key={it.value.label}
@@ -25,7 +25,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Resolution of Declaration of heirs
+                                {infoLabel.t3}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -35,7 +35,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="resolutionOfDeclarationOfHeirsDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -47,7 +47,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Will
+                                {infoLabel.t5}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -57,7 +57,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="willDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -69,7 +69,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Certification from the Registro de Poderes y Testamentos
+                                {infoLabel.t6}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -79,7 +79,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="certificationRegistroPoderesTestamentosDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -91,7 +91,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Resolution of Testamentary Letters, if executor is representing the estate
+                                {infoLabel.t7}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -101,7 +101,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="resolutionTestamentaryLettersExecutorDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -113,7 +113,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Last Will and Testament
+                                {infoLabel.t8}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -123,7 +123,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="lastWillAndTestamentDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -135,7 +135,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Letters of Administration granted by Surrogate of Probate Court or substitute document, in case of Small State Procedure
+                                {infoLabel.t9}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -145,7 +145,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="lettersOfAdministrationOrSmallEstateProcedureDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -157,7 +157,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Certificate of Release of Tax Lien with the Estate Tax Return, including Detalles de Bienes addendum
+                                {infoLabel.t10}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -167,7 +167,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="certificateReleaseTaxLienEstateReturnDetallesBienesDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>
@@ -179,7 +179,7 @@
                     <div class="file-input-section">
                         <div class="file-input-container">
                             <p>
-                                Upload Popular's Document: Requirements for Advancement or Disbursement of Deceased Customer Funds
+                                {infoLabel.t11}
                             </p>
 
                             <!-- Hidden file input without using id -->
@@ -189,7 +189,7 @@
 
                             <!-- Label now triggers the file input programmatically -->
                             <label class="upload-button" data-name="advancementOrDisbursementRequirementsDocument"
-                                onclick={triggerFileUpload}>Upload Document</label>
+                                onclick={triggerFileUpload}>{infoLabel.t4}</label>
                             <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                             <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                         </div>

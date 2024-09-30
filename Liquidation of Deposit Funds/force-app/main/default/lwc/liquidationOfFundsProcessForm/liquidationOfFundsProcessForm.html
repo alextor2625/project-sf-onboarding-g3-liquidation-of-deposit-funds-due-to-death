@@ -41,14 +41,14 @@
                                 <div class="input-section separator">
                                     <div class="checkbox-input-container">
                                         <input type="checkbox" name="legalAgreementCheckbox" onchange={handleCheckbox}/>
-                                        <label for="legalAgreementCheckbox">I have read and accept the legal notification above.</label>
+                                        <label for="legalAgreementCheckbox">{infoLabel.t1}</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="button-container-center">
-                        <a class={submitButtonClass} onclick={handleSubmit}>Submit</a>
+                        <a class={submitButtonClass} onclick={handleSubmit}>{infoLabel.t2}</a>
                     </div>
                 </div>
             </div>

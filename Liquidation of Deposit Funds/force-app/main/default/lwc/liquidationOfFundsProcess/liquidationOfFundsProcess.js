@@ -1,16 +1,27 @@
 import { api, LightningElement, track } from 'lwc';
 import isLoggedIn from '@salesforce/apex/UserController.isLoggedIn'
+import InfoLabel1 from '@salesforce/label/c.Process_Info_1'
+
+
 export default class LiquidationOfFundsProcess extends LightningElement {
+
+    @track infoLabel1 = {};
+    @track options;
+
     @api isLoggedIn;
     async connectedCallback(){
+        this.infoLabel1 = JSON.parse(InfoLabel1);
+        console.log("First options label: ", this.infoLabel1.t5);
+   
+        this.options = [
+            { label: this.infoLabel1.t5, value: "" },
+            { label: this.infoLabel1.t6, value: "No Link" },
+            { label: this.infoLabel1.t7, value: "https://popular.com/processing-estate" },
+            { label: this.infoLabel1.t8, value: "Liquidation Funds" }
+        ];
+
         this.isLoggedIn = await isLoggedIn();
     }
-    options = [
-        { label: "Select request type", value: "" },
-        { label: "Advance Funds For Unpaid Funeral Expenses", value: "No Link" },
-        { label: "General Advance Of Available Funds Or Certification Of Bank", value: "https://popular.com/processing-estate" },
-        { label: "Liquidation Funds", value: "Liquidation Funds" }
-    ];
 
     @track selectedValue = '';
     @track showRequiredDocuments = false;
@@ -30,19 +41,19 @@ export default class LiquidationOfFundsProcess extends LightningElement {
                 this.showRequiredDocuments = true;
                 this.showContinueButton = false;
                 this.disableButton = true;
-                this.message = 'Please verify the documents required below.';
+                this.message = this.infoLabel1.t9;
                 break;
             case "https://popular.com/processing-estate":
                 this.showRequiredDocuments = false;
                 this.showContinueButton = true;
                 this.disableButton = false;
-                this.message = 'By clicking continue you will be redirected to another page.';
+                this.message = this.infoLabel1.t10;
                 break;
             case "No Link":
                 this.showRequiredDocuments = false;
                 this.showContinueButton = true;
                 this.disableButton = true;
-                this.message = 'This Request Type is not available at this time.';
+                this.message = this.infoLabel1.t11;
                 break;
             default:
                 this.showRequiredDocuments = false;

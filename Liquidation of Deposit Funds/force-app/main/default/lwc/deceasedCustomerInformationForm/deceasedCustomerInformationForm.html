@@ -2,44 +2,44 @@
     <div class="form-container">
         <div class="content">
             <div class="title light-blue-text">
-                <h1><b>Deceased customer information</b>:</h1>
+                <h1><b>{infoLabel.t1}</b>:</h1>
             </div>
             <div class="input-section">
                 <div class="input-container">
-                    <label for="firstName">First Name</label>
-                    <input required type="text" name="firstName" maxlength="50" placeholder="First Name"
+                    <label for="firstName">{infoLabel.t2}</label>
+                    <input required type="text" name="firstName" maxlength="50" placeholder={infoLabel.t2}
                         value={deceasedCustomerInformationData.firstName} onchange={handleChange}>
                     <p lwc:if={firstNameErrorMessage} class="error-message">{firstNameErrorMessage}</p>    
                 </div>
                 <div class="input-container">
-                    <label for="lastName">Last Name</label>
-                    <input required type="text" name="lastName" maxlength="50" placeholder="Last Name"
+                    <label for="lastName">{infoLabel.t3}</label>
+                    <input required type="text" name="lastName" maxlength="50" placeholder={infoLabel.t3}
                         value={deceasedCustomerInformationData.lastName} onchange={handleChange}>
                 <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
                 </div>
             </div>
             <div class="input-section">
                 <div class="input-container">
-                    <label for="ssn">Social Security Number</label>
-                    <input required type="text" name="ssn" maxlength="9" placeholder="Social Security Number"
+                    <label for="ssn">{infoLabel.t4}</label>
+                    <input required type="text" name="ssn" maxlength="9" placeholder={infoLabel.t4}
                         value={deceasedCustomerInformationData.ssn} onchange={handleChange}>
                 <p lwc:if={ssnErrorMessage} class="error-message">{ssnErrorMessage}</p>
                 </div>
                 <div class="input-container">
-                    <label for="dateOfDeath">Date Of Death</label>
-                    <input required type="date" name="dateOfDeath" onchange={handleChange}>
+                    <label for="dateOfDeath">{infoLabel.t5}</label>
+                    <input required type="date" name="dateOfDeath"  min="1900-01-01" max={maxDate} onchange={handleChange}>
                     <p lwc:if={dateOfDeathErrorMessage} class="error-message">{dateOfDeathErrorMessage}</p>
                 </div>
             </div>
             <div class="file-input-section">
                 <div class="file-input-container">
-                    <p>Upload Death Certificate (PDF)</p>
+                    <p>{infoLabel.t6} (PDF)</p>
 
                     <!-- Hidden file input without using id -->
                     <input class="file-input" required type="file"  accept=".pdf" name="deathCertificate" data-file-input="deathCertificate" onchange={handleFileChange}>
 
                     <!-- Label now triggers the file input programmatically -->
-                    <label class="upload-button" onclick={triggerFileUpload}>Upload Death Certificate</label>
+                    <label class="upload-button" onclick={triggerFileUpload}>{infoLabel.t6}</label>
                     <p class="error-message" lwc:if={uploadButtonErrorMessage}>{uploadButtonErrorMessage}</p>
                     <!-- <img src="https://resilient-badger-m2qcfb-dev-ed--c.trailblaze.vf.force.com/resource/1726516155000/uploadButtonImage" alt="Upload Image" /> -->
                 </div>

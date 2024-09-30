@@ -1,6 +1,6 @@
 public with sharing class CaseController {
     @AuraEnabled
-    public static String insertCase(Case newCase, Map<String, String> pdfBlobs) {
+    public static List<String> insertCase(Case newCase, Map<String, String> pdfBlobs) {
         try {
             // Insert the case
             // for(String key: newCaseObj.keySet()){
@@ -40,7 +40,7 @@ public with sharing class CaseController {
 
             // Insert all the attachments
             insert attachmentList;
-            return String.valueOf(createdCase.CaseNumber);
+            return new List<String> {String.valueOf(caseId), String.valueOf(createdCase.CaseNumber)};
         } catch (Exception e) {
             System.debug('Exception: ' + e);
             throw new AuraHandledException(e.getMessage());

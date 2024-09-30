@@ -1,17 +1,14 @@
 .wraper {
     display: flex;
     border: none;
-    width: 10.5rem;
+    width: 9rem;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    /* top: 5px; */
-    /* right: 1px; */
-    /* padding: 10px; */
     border-radius: 5px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     height: 2.5rem;
-    box-shadow: rgba(128, 128, 128, 0.385) 1px 1px 4px 1px;
+    box-shadow: rgba(128, 128, 128, 0.385) 0px 0px 4px 1px;
 }
 
 .container {
@@ -19,5 +16,6 @@
     justify-content: flex-end;
     width: 100%;
     height: max-content;
-    padding: 5px;
+    margin-bottom: -15px;
+    margin-top: -5px;
 }

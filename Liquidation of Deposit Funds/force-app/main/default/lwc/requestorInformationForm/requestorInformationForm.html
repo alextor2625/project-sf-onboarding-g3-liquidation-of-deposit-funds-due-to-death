@@ -4,25 +4,25 @@
         </div> -->
         <div class="content">
             <div class="title light-blue-text">
-                <h1><b>Requestor Information</b>:</h1>
+                <h1><b>{infoLabel.t1}</b>:</h1>
             </div>
             <div class="input-section">
                 <div class="input-container">
-                    <label for="firstName">First Name</label>
-                    <input required type="text" name="firstName" placeholder="First Name"
+                    <label for="firstName">{infoLabel.t2}</label>
+                    <input required type="text" name="firstName" placeholder={infoLabel.t2}
                         value={requestorInformationData.firstName} maxlength="50" onchange={handleChange} disabled>
                     <p lwc:if={firstNameErrorMessage} class="error-message">{firstNameErrorMessage}</p>    
                 </div>
                 <div class="input-container">
-                    <label for="lastName">Last Name</label>
-                    <input required type="text" name="lastName" maxlength="50" placeholder="Last Name"
+                    <label for="lastName">{infoLabel.t3}</label>
+                    <input required type="text" name="lastName" maxlength="50" placeholder={infoLabel.t3}
                         value={requestorInformationData.lastName} onchange={handleChange} disabled>
                 <p lwc:if={lastNameErrorMessage} class="error-message">{lastNameErrorMessage}</p>
                 </div>
             </div>
             <div class="input-section selector-input-section">
                 <div class="selector-input-container">
-                    <label for="relationship">Relationship</label>
+                    <label for="relationship">{infoLabel.t4}</label>
                     <select name="relationship" onchange={handleChange} class="selector-input place-holder-text">
                         <template iterator:it={relationshipOptions} for:index="index">
                             <option key={index} lwc:if={it.first} value={it.value.value} selected class="place-holder-text">{it.value.label}</option>
@@ -33,20 +33,20 @@
                     <p lwc:if={relationshipErrorMessage} class="error-message">{relationshipErrorMessage}</p>
                 </div>
                 <div class="input-container">
-                    <label for="email">Email</label>
-                    <input required type="email" placeholder="Email" name="email" value={requestorInformationData.email} onchange={handleChange} disabled>
+                    <label for="email">{infoLabel.t5}</label>
+                    <input required type="email" placeholder={infoLabel.t5} name="email" value={requestorInformationData.email} onchange={handleChange} disabled>
                     <p lwc:if={emailErrorMessage} class="error-message">{emailErrorMessage}</p>
                 </div>
             </div>
             <div class="input-section">
                 <div class="input-container">
-                    <label for="preferredPhoneNumber">Preferred Phone Number</label>
-                    <input required type="tel" placeholder="Preferred Phone Number" name="preferredPhoneNumber" value={requestorInformationData.preferredPhoneNumber} onchange={handleChange} disabled>
+                    <label for="preferredPhoneNumber">{infoLabel.t6}</label>
+                    <input required type="tel" placeholder={infoLabel.t6} name="preferredPhoneNumber" value={requestorInformationData.preferredPhoneNumber} onchange={handleChange} disabled>
                     <p lwc:if={preferredPhoneNumberErrorMessage} class="error-message">{preferredPhoneNumberErrorMessage}</p>
                 </div>
                 <div class="input-container">
-                    <label for="otherPhoneNumber">Other Phone Number</label>
-                    <input required type="tel" placeholder="Other Phone Number" maxlength="10" name="otherPhoneNumber" value={requestorInformationData.otherPhoneNumber} onchange={handleChange}>
+                    <label for="otherPhoneNumber">{infoLabel.t7}</label>
+                    <input required type="tel" placeholder={infoLabel.t7} maxlength="10" name="otherPhoneNumber" value={requestorInformationData.otherPhoneNumber} onchange={handleChange}>
                 </div>
             </div>
         </div>

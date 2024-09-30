@@ -3,51 +3,42 @@
         <div class="card">
             <div class={wrapperClass}>
                 <div class="content">
-                    <p>You can request a liquidation of funds, it is important that you have these documents before
-                        proceeding</p>
+                    <p>{infoLabel1.t1}</p>
                     <ol class="slds-list_ordered">
-                        <li>Death Certificate (original or copy)</li>
+                        <li>{infoLabel1.t2}</li>
                         <li>
-                            Will documents:<br />
+                            {infoLabel1.t3}<br />
                             <div class="indent">
-                                <b> Will in Puerto Rico:</b><br />
+                                <b>{infoLabel1.t4}</b><br />
                                 <ul class="slds-list_dotted">
-                                    <li>Will and the certification from the Registro de Poderes y Testamentos</li>
-                                    <li>Resolution of Testamentary Letters in case of Executor representing the Estate,
-                                        according to the Testament</li>
+                                    <li>{infoLabel1.t5}</li>
+                                    <li>{infoLabel1.t6}</li>
                                 </ul>
-                                <b> Will in USA</b><br />
+                                <b>{infoLabel1.t7}</b><br />
                                 <ul class="slds-list_dotted">
-                                    <li>Last Will and Testament</li>
-                                    <li>Letters of Administration granted by Surrogate of Probate Court or substitute
-                                        document, in case of Small Estate Procedure</li>
+                                    <li>{infoLabel1.t8}</li>
+                                    <li>{infoLabel1.t9}</li>
                                 </ul>
-                                <b> Without Will</b><br />
+                                <b>{infoLabel1.t10}</b><br />
                                 <ul class="slds-list_dotted">
-                                    <li>Resolution of Declaration of Heirs</li>
+                                    <li>{infoLabel1.t11}</li>
                                 </ul>
                             </div>
                         </li>
-                        <li>If the disbursement amount is greater than $15,000 Certificate of Release of Tax Lien with
-                            the Estate Tax Return that includes the Detalles de Bienes addendum</li>
-                        <li>If you would like the disbursement to be submitted in a particular account you will need to
-                            upload <span class="red-text"> POPULAR DOC XXX</span></li>
-                        <li>If you are picking up the check in a Popular branch and not all of the heirs will be
-                            present, you will need the following documents depending on the location of the heir that
-                            will not be present:</li>
+                        <li>{infoLabel1.t12}</li> 
+                            <!-- custom label 1 limit -->
+                        <li>{infoLabel2.t1}<span class="red-text">POPULAR DOC XXX</span></li>
+                        <li>{infoLabel2.t3}</li>
                         <ul class="bullet-list-checkmark">
-                            <li><b>Active Duty in US Armed Forces</b>, Military Power</li>
-                            <li><b>Foreign Country</b>, Apostille (note or explanatory letter) from the issuing country</li>
-                            <li><b>Puerto Rico</b>, Affidavit or Power of Attorney issued in Puerto Rico authorizing a third
-                                party to receive, endorse, and/or exchange check because of the transaction</li>
-                            <li><b>United States</b>, Affidavit or Power of Attorney issued in United States and a Country
-                                Clerk Certificate from the issuing state.</li>
+                            <li><b>{infoLabel2.t4}</b>{infoLabel2.t5}</li>
+                            <li><b>{infoLabel2.t6}</b>{infoLabel2.t7}</li>
+                            <li><b>Puerto Rico</b>{infoLabel2.t8}</li>
+                            <li><b>{infoLabel2.t9}</b>{infoLabel2.t10}</li>
                         </ul>
                     </ol>
                     <br/>
                     <div class="form-container">
-                        <p class="required-documents-question"><b>Do you have all the documents required, detailed
-                                above?</b></p>
+                        <p class="required-documents-question"><b>{infoLabel2.t11}</b></p>
                         <div class="selector-container">
                             <select class="selector" onchange={handleSelected}>
                                 <template for:each={options} for:item="opt">
@@ -66,7 +57,7 @@
                     <div class={buttonContainerClass}>
                         <template lwc:if={showButton}>
                             <div class="btn-container-right">
-                                <a href={redirectLink} class="custom-btn">Continue</a>
+                                <a href={redirectLink} class="custom-btn">{infoLabel2.t12}</a>
                             </div>
                         </template>
                     </div>

@@ -1,37 +1,15 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 import getCurrentUser from '@salesforce/apex/UserController.getCurrentUser';
+import InfoLabel from '@salesforce/label/c.Requestor_Info'
 
 export default class RequestorInformationForm extends LightningElement {
 
+    @track infoLabel = {};
+    @track relationshipOptions;
+
     @api requestorInformationData;
     relationshipSelectedValue = ''
-    relationshipOptions = [
-        { label: 'Relationship', value: '' },
-        { label: 'Father', value: 'Father' },
-        { label: 'Mother', value: 'Mother' },
-        { label: 'Brother', value: 'Brother' },
-        { label: 'Sister', value: 'Sister' },
-        { label: 'Son', value: 'Son' },
-        { label: 'Daughter', value: 'Daughter' },
-        { label: 'Grandfather', value: 'Grandfather' },
-        { label: 'Grandmother', value: 'Grandmother' },
-        { label: 'Grandson', value: 'Grandson' },
-        { label: 'Granddaughter', value: 'Granddaughter' },
-        { label: 'Uncle', value: 'Uncle' },
-        { label: 'Aunt', value: 'Aunt' },
-        { label: 'Nephew', value: 'Nephew' },
-        { label: 'Niece', value: 'Niece' },
-        { label: 'Cousin', value: 'Cousin' },
-        { label: 'Stepfather', value: 'Stepfather' },
-        { label: 'Stepmother', value: 'Stepmother' },
-        { label: 'Stepbrother', value: 'Stepbrother' },
-        { label: 'Stepsister', value: 'Stepsister' },
-        { label: 'Husband', value: 'Husband' },
-        { label: 'Wife', value: 'Wife' },
-        { label: 'Fiancé', value: 'Fiancé' },
-        { label: 'Fiancée', value: 'Fiancée' },
-        { label: 'Spouse', value: 'Spouse' },
-    ];
+    
     relationshipPHClass() {
         const element = this.template.querySelector('.selector-input');
         return element.value !== '' ? element.classList.remove('place-holder-text') : element.classList.add('place-holder-text');
@@ -40,6 +18,37 @@ export default class RequestorInformationForm extends LightningElement {
     async connectedCallback() {
         try {
             console.log("Getting User!")
+
+            this.infoLabel = JSON.parse(InfoLabel);
+
+            this.relationshipOptions = [
+                { label: this.infoLabel.t4, value: '' },
+                { label: this.infoLabel.t8, value: 'Father' },
+                { label: this.infoLabel.t9, value: 'Mother' },
+                { label: this.infoLabel.t10, value: 'Brother' },
+                { label: this.infoLabel.t11, value: 'Sister' },
+                { label: this.infoLabel.t12, value: 'Son' },
+                { label: this.infoLabel.t13, value: 'Daughter' },
+                { label: this.infoLabel.t14, value: 'Grandfather' },
+                { label: this.infoLabel.t15, value: 'Grandmother' },
+                { label: this.infoLabel.t16, value: 'Grandson' },
+                { label: this.infoLabel.t17, value: 'Granddaughter' },
+                { label: this.infoLabel.t18, value: 'Uncle' },
+                { label: this.infoLabel.t19, value: 'Aunt' },
+                { label: this.infoLabel.t20, value: 'Nephew' },
+                { label: this.infoLabel.t21, value: 'Niece' },
+                { label: this.infoLabel.t22, value: 'Cousin' },
+                { label: this.infoLabel.t23, value: 'Stepfather' },
+                { label: this.infoLabel.t24, value: 'Stepmother' },
+                { label: this.infoLabel.t25, value: 'Stepbrother' },
+                { label: this.infoLabel.t26, value: 'Stepsister' },
+                { label: this.infoLabel.t27, value: 'Husband' },
+                { label: this.infoLabel.t28, value: 'Wife' },
+                { label: this.infoLabel.t29, value: 'Fiancé' },
+                { label: this.infoLabel.t30, value: 'Fiancée' },
+                { label: this.infoLabel.t31, value: 'Spouse' },
+            ];
+
             const record = await getCurrentUser();
             this.requestorInformationData = {
                 ...this.requestorInformationData,

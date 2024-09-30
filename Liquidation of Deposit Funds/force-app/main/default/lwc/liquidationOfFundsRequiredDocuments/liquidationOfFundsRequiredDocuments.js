@@ -1,14 +1,30 @@
 import { api, LightningElement, track } from 'lwc';
+import InfoLabel1 from '@salesforce/label/c.Required_Documents_Info_1'
+import InfoLabel2 from '@salesforce/label/c.Required_Documents_Info_2'
+import InfoLabel3 from '@salesforce/label/c.Required_Documents_Info_3'
+
 
 export default class LiquidationOfFundsRequiredDocuments extends LightningElement {
 
+    @track infoLabel1 = {};
+    @track infoLabel2 = {};
+    @track infoLabel3 = {};
+    @track options;
+  
+
+    connectedCallback(){
+        this.infoLabel1 = JSON.parse(InfoLabel1);
+        this.infoLabel2 = JSON.parse(InfoLabel2);
+        this.infoLabel3 = JSON.parse(InfoLabel3);
+        this.options = [
+            { label: this.infoLabel3.t1, value: "" },
+            { label: this.infoLabel3.t2, value: "yes" },
+            { label: this.infoLabel3.t3, value: "no" }
+        ];
+    }
+
     @api isLoggedIn
     // Options for the dropdown
-    options = [
-        { label: "Select Yes/No", value: "" },
-        { label: "Yes", value: "yes" },
-        { label: "No", value: "no" }
-    ];
 
     // Reactive tracked properties
     @track redirectLink = '';
@@ -65,7 +81,7 @@ export default class LiquidationOfFundsRequiredDocuments extends LightningElemen
                 //     },250)
                 // }, 500); // Delayed message display for fade-in effect
                 // this.wrapperClass = 'wrapper-selected-yes';
-                this.message = 'By clicking continue you will be redirected to a registration page.';
+                this.message = this.infoLabel3.t4;
                 break;
 
             case "no":
@@ -87,7 +103,7 @@ export default class LiquidationOfFundsRequiredDocuments extends LightningElemen
                     
                 // }, 1000); // Delayed message display for fade-in effect
                 // this.wrapperClass = 'wrapper-selected-no';
-                this.message = 'In order to continue you must have the required documents.';
+                this.message = this.infoLabel3.t5;
                 break;
 
             default:

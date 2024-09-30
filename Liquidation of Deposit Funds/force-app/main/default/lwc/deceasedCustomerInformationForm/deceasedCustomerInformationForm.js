@@ -1,7 +1,17 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import InfoLabel from '@salesforce/label/c.Deceased_Customer_Info'
 
 export default class DeceasedCustomerInformationForm extends LightningElement {
+    get maxDate(){
+        return new Date().toISOString().split('T')[0];
+    }
+    @track infoLabel = {};
+
+    connectedCallback(){
+            this.infoLabel = JSON.parse(InfoLabel);
+    }
+
     @api deceasedCustomerInformationData;
 
     firstNameErrorMessage ='';

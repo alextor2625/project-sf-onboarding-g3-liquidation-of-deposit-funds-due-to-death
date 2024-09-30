@@ -1,17 +1,26 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import InfoLabel from '@salesforce/label/c.Additional_Required_Docs_1'
 
 export default class AdditionalRequiredDocumentsForm extends LightningElement {
+
+    @track infoLabel = {};
+    @track isThereAWillOptions;
+
+    connectedCallback(){
+            this.infoLabel = JSON.parse(InfoLabel);
+
+            this.isThereAWillOptions = [
+                {label: this.infoLabel.t12, value: ''},
+                {label: this.infoLabel.t13, value: 'Yes, Will in PR'},
+                {label: this.infoLabel.t14, value: 'Yes, Will in USA'},
+                {label: this.infoLabel.t15, value: 'No, without Will'},
+            ]
+    }
+
     @api additionalRequiredDocumentsData;
     @api showGreaterThan15kAdditionalDocumentUpload;
 
-    isThereAWillOptions = [
-        {label: 'Select an answer', value: ''},
-        {label: 'Yes, Will in PR', value: 'Yes, Will in PR'},
-        {label: 'Yes, Will in USA', value: 'Yes, Will in USA'},
-        {label: 'No, without Will', value: 'No, without Will'},
-        
-    ]
     showResolutionOfDeclarationOfHeirsDocument=false
     showWillDocument=false
     showCertificationRegistroPoderesTestamentosDocument=false
