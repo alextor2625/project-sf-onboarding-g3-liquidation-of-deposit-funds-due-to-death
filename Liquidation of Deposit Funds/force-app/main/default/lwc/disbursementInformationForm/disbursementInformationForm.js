@@ -2,11 +2,13 @@ import { api, LightningElement, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import InfoLabel from '@salesforce/label/c.Disbursement_Info_1'
 import InfoLabel2 from '@salesforce/label/c.Disbursement_Info_2'
+import InfoLabel3 from '@salesforce/label/c.Disbursement_Info_3'
 
 export default class DisbursementInformationForm extends LightningElement {
 
     @track infoLabel = {};
     @track infoLabel2 = {};
+    @track infoLabel3 = {};
     @track greaterThan15kOptions;
     @track disbursementPreferenceOptions;
     @track pickUpCheckWillAllHeirsBePresentOptions;
@@ -15,6 +17,7 @@ export default class DisbursementInformationForm extends LightningElement {
     connectedCallback(){
         this.infoLabel = JSON.parse(InfoLabel);
         this.infoLabel2 = JSON.parse(InfoLabel2);
+        this.infoLabel3 = JSON.parse(InfoLabel3);
 
         this.greaterThan15kOptions = [
             { label: this.infoLabel2.t8, value: '' },
@@ -247,7 +250,7 @@ export default class DisbursementInformationForm extends LightningElement {
     }
     get branchTownOptions() {
         return [
-            { label: "Select Town", value: "" },
+            { label: this.infoLabel3.t1, value: "" },
             { label: "Adjuntas", value: "Adjuntas" },
             { label: "Aguada", value: "Aguada" },
             { label: "Aguadilla", value: "Aguadilla" },
