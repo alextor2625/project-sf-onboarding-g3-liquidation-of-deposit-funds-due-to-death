@@ -326,28 +326,28 @@ advancementOrDisbursementRequirementsDocument
     }
     handleSubmit() {
         try {
-            // if(true){
-            //     console.log("Testing Validation",this.verifyFormCompletion());
-            //     return
-            // }
-            if(this.buttonActive){
-                this.buttonActive = false;
-            } else{
-                this.showToast("Warning", "Your Case is being created, please hold", 'warning', 'sticky')
-                return
-            }
-            if (!this.reCaptchaSuccess) {
-                this.showToast("Error", "Please Complete The reCAPTCHA.", 'error', 'sticky')
-                return
-            }
-            if (!this.legalAgreementCheckbox) {
-                this.showToast("Error", "To continue please read and agree to the terms.", 'error', 'sticky')
-                return
-            }
             if(!this.verifyFormCompletion()){
                 this.showToast("Error", "Please All Fields Must Be Filled", 'error', 'sticky')
                 return
             }
+            else if (!this.reCaptchaSuccess) {
+                this.showToast("Error", "Please Complete The reCAPTCHA.", 'error', 'sticky')
+                return
+            }
+            else if (!this.legalAgreementCheckbox) {
+                this.showToast("Error", "To continue please read and agree to the terms.", 'error', 'sticky')
+                return
+            }
+            else{
+                
+                if(this.buttonActive){
+                    this.buttonActive = false;
+                } else{
+                    this.showToast("Warning", "Your request is being processed, please hold", 'warning', 'sticky')
+                    return
+                }
+            }
+            
             
             const newCase = {
                 //Hidden Requirements
