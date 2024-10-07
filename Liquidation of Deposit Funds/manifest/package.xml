@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!--
     <types>
         <members>*</members>
         <name>ApexClass</name>
@@ -11,7 +12,7 @@
     <types>
         <members>*</members>
         <name>ApexPage</name>
-    </types>
+    </types> 
     <types>
         <members>*</members>
         <name>ApexTestSuite</name>
@@ -28,9 +29,69 @@
         <members>*</members>
         <name>LightningComponentBundle</name>
     </types>
+    
+    -->
     <types>
+    <!-- Custom fields for the Account object -->
+    <members>Account.Active__c</members>
+    <members>Account.Email__c</members>
+    <members>Account.SLA__c</members>
+    <!-- Custom fields for the Contact object -->
+    <members>Contact.SSN__c</members>
+    <!-- Custom fields for the Case object -->
+    <members>Case.Case_Detail_Page_URL__c</members>
+    <members>Case.ContactEmail</members>
+    <members>Case.OwnerId</members>
+    <members>Case.Case_Owner_Name__c</members>
+    <members>Case.CaseNumber</members>
+    <members>Case.Resolution_Status__c</members>
+    <members>Case.Workflow_Status__c</members>
+    <members>Case.Status</members>
+    <members>Case.Origin</members>
+    <members>Case.Assigned_Date__c</members>
+    <members>Case.Closed_Date__c</members>
+    <members>Case.First_Name__c</members>
+    <members>Case.SSN__c</members>
+    <members>Case.Last_Name__c</members>
+    <members>Case.Date_of_Death__c</members>
+    <members>Case.Is_there_a_Will__c</members>
+    <members>Case.AccountId</members>
+    <members>Case.Account_First_Name__c</members>
+    <members>Case.Account_Last_Name__c</members>
+    <members>Case.Relationship__c</members>
+    <members>Case.Email__c</members>
+    <members>Case.P_Phone_Number__c</members>
+    <members>Case.Credit_Cards_Coded_and_Closed__c</members>
+    <members>Case.CD_JIRA_Verification__c</members>
+    <members>Case.Verify_Goverment_Deposite_After_Death__c</members>
+    <members>Case.Goverment_Deposits_after_Death__c</members>
+    <members>Case.PCAS_ACH_Claim_Open__c</members>
+    <members>Case.ACH_Claim_Status__c</members>
+    <members>Case.Account_Holder_Name__c</members>
+    <members>Case.Disbursed_Account_Number__c</members>
+    <members>Case.Amount_Disbursed__c</members>
+    <members>Case.Customer_Pick_up_Date__c</members>
+    <members>Case.Amount_Disbursed__c</members>
+    <members>Case.Branch_Town__c</members>
+    <members>Case.Branch_Name__c</members>
+    <members>Case.Will_All_The_Heirs_Be_Present__c</members>
+    <members>Case.Where_Is_he_located__c</members>
+    <members>Case.Social_Security_Number__c</members>
+    <members>Case.Is_the_sum_all_account_more_than_15k__c</members>
+    <members>Case.Legal_Compliance__c</members>
+    <members>Case.Other_Phone_Number__c</members>
+    <members>Case.Disbursement__c</members>
+    <members>Case.Disbursement_Account_Number__c</members>
+    <name>CustomField</name>
+  </types>
+  <types>
+    <members>LiqdFnds Portal User</members>
+    <members>Custom Standard User</members>
+    <name>Profile</name>
+  </types>
+  <types>
         <members>*</members>
         <name>StaticResource</name>
     </types>
-    <version>61.0</version>
+  <version>61.0</version>
 </Package>

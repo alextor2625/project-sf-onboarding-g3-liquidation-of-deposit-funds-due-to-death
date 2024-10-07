@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_there_a_Will__c</fullName>
+    <label>Is there a Will?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes, Will in PR</fullName>
+                <default>false</default>
+                <label>Yes, Will in PR</label>
+            </value>
+            <value>
+                <fullName>Yes, Will in USA</fullName>
+                <default>false</default>
+                <label>Yes, Will in USA</label>
+            </value>
+            <value>
+                <fullName>No, without Will</fullName>
+                <default>false</default>
+                <label>No, without Will</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Approved-Pickup Check Email</name>
+    <style>none</style>
+    <subject>Request Approved</subject>
+    <textOnly>Hi {!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+
+Please accept our heartfelt condolences during this difficult time. We are here to offer our full support. We have carefully reviewed your Liquidation Funds request associated with ticket {!Case.CaseNumber}, and we are pleased to inform you that it has been approved. Your check is now available for pick-up at our {!Case.Branch_Name__c} branch in {!Case.Branch_Town__c}.
+
+We kindly ask you to bring a valid form of identification and mention the ticket number upon arrival. If there&apos;s anything more we can do to assist you, please don&apos;t hesitate to reach out
+
+We are here to serve you;
+Banco Popular de Puerto Rico</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

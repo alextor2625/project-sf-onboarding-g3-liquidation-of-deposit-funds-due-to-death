@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <customErrors>
+        <name>CD_Jira_verification_must_be_completed</name>
+        <label>CD/Jira verification must be completed</label>
+        <locationX>930</locationX>
+        <locationY>911</locationY>
+        <customErrorMessages>
+            <errorMessage>CD/Jira verification must be completed before closing the workflow.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Credit_Cards_must_be_coded</name>
+        <label>Credit Cards must be coded</label>
+        <locationX>1194</locationX>
+        <locationY>803</locationY>
+        <customErrorMessages>
+            <errorMessage>Credit Cards must be coded before the workflow can be closed.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Goverment_deposits_after_death</name>
+        <label>Goverment deposits after death</label>
+        <locationX>578</locationX>
+        <locationY>1619</locationY>
+        <customErrorMessages>
+            <errorMessage>If Government Deposits After Death the ACH Claim Status must be &apos;Completed&apos; before closing.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>It_cant_be_set_to_New</name>
+        <label>It cant be set to New</label>
+        <locationX>1887</locationX>
+        <locationY>803</locationY>
+        <connector>
+            <targetReference>VGDAD_Rollback</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Yo cannot do these changes</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Please_make_sure_to_fill_the_amount</name>
+        <label>Please make sure to fill the amount</label>
+        <locationX>50</locationX>
+        <locationY>1019</locationY>
+        <connector>
+            <targetReference>v</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Customer Pick up Date and Amount Disbursed must be filled if the resolution is Approved-Deposit Or Approved-Pickup Check</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Please_Provide_a_Owner</name>
+        <label>Please Provide a Owner</label>
+        <locationX>1474</locationX>
+        <locationY>395</locationY>
+        <connector>
+            <targetReference>Workflow_set_to_closed</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Please Provide a Owner</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Please_provide_a_Resolution</name>
+        <label>Please provide a Resolution</label>
+        <locationX>490</locationX>
+        <locationY>1019</locationY>
+        <connector>
+            <targetReference>v</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>Please provide a Resolution</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Verify_If_the_Goverment_Deposits_after_Death_must_be_checked</name>
+        <label>Verify If the Goverment Deposits after Death must be checked</label>
+        <locationX>490</locationX>
+        <locationY>1319</locationY>
+        <connector>
+            <targetReference>GDAD_Final_No</targetReference>
+        </connector>
+        <customErrorMessages>
+            <errorMessage>You must Verify If the Goverment Deposits after Death</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>ACH_Claim_Status_Completed</name>
+        <label>ACH Claim Status Completed</label>
+        <locationX>1590</locationX>
+        <locationY>1619</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ACH_Claim_is_completed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ACH_Claim_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Ready_to_Close_Case</targetReference>
+            </connector>
+            <label>ACH Claim is completed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Amount_Disbursed_for_Approved_Deposit_and_Approved_Pickup_Check</name>
+        <label>Amount Disbursed (for Approved-Deposit and Approved-Pickup Check)</label>
+        <locationX>402</locationX>
+        <locationY>911</locationY>
+        <defaultConnector>
+            <targetReference>v</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Amount_Not_Provided</name>
+            <conditionLogic>(1 OR 2) AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Resolution_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved-Deposite</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Resolution_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved-Pickup Check</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount_Disbursed__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount_Disbursed__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Please_make_sure_to_fill_the_amount</targetReference>
+            </connector>
+            <label>Amount Not Provided</label>
+        </rules>
+        <rules>
+            <name>Amount_Not_Required</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Resolution_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Denied</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Resolution_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Denied-Funds Exceed $15k</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Resolution_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Denied-No Funds Available</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>v</targetReference>
+            </connector>
+            <label>Amount Not Required</label>
+        </rules>
+        <rules>
+            <name>Nothing_is_provided</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Resolution_Status__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Please_provide_a_Resolution</targetReference>
+            </connector>
+            <label>Nothing is provided</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Once the case has a Case Owner Name it cannot be Rolled back to New</description>
+        <name>Cannot_be_New</name>
+        <label>Cannot be New</label>
+        <locationX>2019</locationX>
+        <locationY>695</locationY>
+        <defaultConnector>
+            <targetReference>VGDAD_Rollback</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>The_case_is_New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Workflow_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>It_cant_be_set_to_New</targetReference>
+            </connector>
+            <label>Its set to New</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Case_can_Be_closed</name>
+        <label>Case can Be closed</label>
+        <locationX>402</locationX>
+        <locationY>1919</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Its_ready_for_close</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Workflow_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Status_is_closed</targetReference>
+            </connector>
+            <label>Its ready for close</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CD_and_Jira_Done</name>
+        <label>CD and Jira Done</label>
+        <locationX>666</locationX>
+        <locationY>803</locationY>
+        <defaultConnector>
+            <targetReference>CD_Jira_verification_must_be_completed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CD_and_Jira_Done_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CD_JIRA_Verification__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Amount_Disbursed_for_Approved_Deposit_and_Approved_Pickup_Check</targetReference>
+            </connector>
+            <label>CD and Jira Done True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Credit_Cards_Coded_as_Deceased</name>
+        <label>Credit Cards Coded as Deceased</label>
+        <locationX>930</locationX>
+        <locationY>695</locationY>
+        <defaultConnector>
+            <targetReference>Credit_Cards_must_be_coded</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Credit_Cards_Coded_as_Deceased_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Credit_Cards_Coded_and_Closed__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CD_and_Jira_Done</targetReference>
+            </connector>
+            <label>Credit Cards Coded as Deceased True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Does_the_case_have_a_Owner</name>
+        <label>Does the case have a Owner?</label>
+        <locationX>1474</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Workflow_set_to_closed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Owner_Adquired</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Case_Owner_Name__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_ready_for_In_Progress</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Owner Adquired</label>
+        </rules>
+        <rules>
+            <name>No_owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Case_Owner_Name__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Workflow_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In-Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Please_Provide_a_Owner</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>No owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>GDAD_Final_No</name>
+        <label>GDAD</label>
+        <locationX>402</locationX>
+        <locationY>1511</locationY>
+        <defaultConnector>
+            <targetReference>Goverment_deposits_after_death</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>They_Do_Final</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Goverment_Deposits_after_Death__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ACH_Claim_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_can_Be_closed</targetReference>
+            </connector>
+            <label>They Do Final</label>
+        </rules>
+        <rules>
+            <name>GDAD_NO</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Goverment_Deposits_after_Death__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_can_Be_closed</targetReference>
+            </connector>
+            <label>GDAD NO</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>GDAD_RollBack</name>
+        <label>GDAD RollBack</label>
+        <locationX>1788</locationX>
+        <locationY>1103</locationY>
+        <defaultConnector>
+            <targetReference>Roll_back_GDAD</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Its_true</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Goverment_Deposits_after_Death__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PCAS_ACH_Claim_Open</targetReference>
+            </connector>
+            <label>Its true</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>PCAS_ACH_Claim_Open</name>
+        <label>PCAS ACH Claim Open</label>
+        <locationX>1590</locationX>
+        <locationY>1211</locationY>
+        <defaultConnector>
+            <targetReference>Roll_back_if_the_field_set_back</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>PCAS_ACH_Claim_is_open</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PCAS_ACH_Claim_Open__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ACH_Claim_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ACH_CLAIM_Status</targetReference>
+            </connector>
+            <label>PCAS ACH Claim is open</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>v</name>
+        <label>VGDAD</label>
+        <locationX>402</locationX>
+        <locationY>1211</locationY>
+        <defaultConnector>
+            <targetReference>Verify_If_the_Goverment_Deposits_after_Death_must_be_checked</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Marked_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Verify_Goverment_Deposite_After_Death__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GDAD_Final_No</targetReference>
+            </connector>
+            <label>Marked True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Roll back changes if it equals to NO</description>
+        <name>VGDAD_Rollback</name>
+        <label>VGDAD Rollback</label>
+        <locationX>2019</locationX>
+        <locationY>995</locationY>
+        <defaultConnector>
+            <targetReference>Roll_back_if_the_VGDAD_is_Set_back</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>its_Marked_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Verify_Goverment_Deposite_After_Death__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GDAD_RollBack</targetReference>
+            </connector>
+            <label>its Marked True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Workflow_set_to_closed</name>
+        <label>Workflow set to closed?</label>
+        <locationX>1474</locationX>
+        <locationY>587</locationY>
+        <defaultConnector>
+            <targetReference>Cannot_be_New</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_the_case_set_to_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Workflow_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Credit_Cards_Coded_as_Deceased</targetReference>
+            </connector>
+            <label>Is the case set to Closed</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Official Case Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Official Case Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>ACH_CLAIM_Status</name>
+        <label>ACH CLAIM Status</label>
+        <locationX>1458</locationX>
+        <locationY>1319</locationY>
+        <connector>
+            <targetReference>WorkflowStatus_Hold</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ACH_Claim_Status__c</field>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Case_ready_for_In_Progress</name>
+        <label>Case ready for In- Progress</label>
+        <locationX>1210</locationX>
+        <locationY>395</locationY>
+        <connector>
+            <targetReference>Workflow_set_to_closed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Working</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Workflow_Status__c</field>
+            <value>
+                <stringValue>In-Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Ready_to_Close_Case</name>
+        <label>Ready to Close Case</label>
+        <locationX>1458</locationX>
+        <locationY>1727</locationY>
+        <inputAssignments>
+            <field>Workflow_Status__c</field>
+            <value>
+                <stringValue>In-Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Roll_back_GDAD</name>
+        <label>Roll back GDAD</label>
+        <locationX>1986</locationX>
+        <locationY>1211</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Goverment_Deposits_after_Death__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>No</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Workflow_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ACH_Claim_Status__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PCAS_ACH_Claim_Open__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Workflow_Status__c</field>
+            <value>
+                <stringValue>In-Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Roll_back_if_the_field_set_back</name>
+        <label>Roll back if the field set back</label>
+        <locationX>1722</locationX>
+        <locationY>1319</locationY>
+        <connector>
+            <targetReference>ACH_Claim_Status_Completed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PCAS_ACH_Claim_Open__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>No</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Workflow_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ACH_Claim_Status__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Workflow_Status__c</field>
+            <value>
+                <stringValue>In-Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Roll_back_if_the_VGDAD_is_Set_back</name>
+        <label>Roll back if the VGDAD is Set back</label>
+        <locationX>2250</locationX>
+        <locationY>1103</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Verify_Goverment_Deposite_After_Death__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Workflow_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Hold</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ACH_Claim_Status__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Goverment_Deposits_after_Death__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PCAS_ACH_Claim_Open__c</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Workflow_Status__c</field>
+            <value>
+                <stringValue>In-Progress</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Status_is_closed</name>
+        <label>Status is closed</label>
+        <locationX>270</locationX>
+        <locationY>2027</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>WorkflowStatus_Hold</name>
+        <label>WorkflowStatus Hold</label>
+        <locationX>1458</locationX>
+        <locationY>1427</locationY>
+        <connector>
+            <targetReference>ACH_Claim_Status_Completed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Workflow_Status__c</field>
+            <value>
+                <stringValue>Hold</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1348</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Does_the_case_have_a_Owner</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

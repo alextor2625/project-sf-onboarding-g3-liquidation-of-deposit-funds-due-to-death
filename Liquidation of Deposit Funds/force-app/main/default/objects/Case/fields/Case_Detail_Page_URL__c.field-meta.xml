@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Detail_Page_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;https://resilient-badger-m2qcfb-dev-ed.trailblaze.my.site.com/LiquidationOfDepositFunds/s/case/&quot; +  Id  + &quot;/detail&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Case Detail Page URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

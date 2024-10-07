@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Approved-Deposit Email</name>
+    <style>none</style>
+    <subject>Request Approved</subject>
+    <textOnly>Hi{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+
+Please accept our deepest condolences for your loss. We are here to provide you with the support you need during this difficult time. We have completed the review of your Liquidation of Funds request under ticket {!Case.CaseNumber}, and we are pleased to confirm that it has been approved. The amount of {!Case.Amount_Disbursed__c} has been deposited into the account ending in {!Case.Disbursement_Account_Number__c}.
+
+If you have any questions, you can contact us  at 787-724-3650 or visit one of our branches
+
+We are here to serve you;
+Banco Popular de Puerto Rico</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

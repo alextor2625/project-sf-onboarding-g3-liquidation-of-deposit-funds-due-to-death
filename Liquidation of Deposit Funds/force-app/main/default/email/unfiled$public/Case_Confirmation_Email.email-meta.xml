@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Confirmation Email</name>
+    <style>none</style>
+    <subject>Case Confirmation</subject>
+    <textOnly>Hi {!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+
+We are sorry for your loss and we are here to support you in these process. We have received your Liquidation Funds request. Your ticket number is {!Case.CaseNumber} and you may use it as reference. We will review the submitted documentation and information and send you an email with the resolution of your request.
+
+If you have any questions, you can contact us at 787-724-3650 or visit one of our branches.
+
+We are here to serve you;
+Banco Popular de Puerto Rico</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

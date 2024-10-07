@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Name__c</fullName>
+    <label>Branch Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Branch_Town__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adjuntas</fullName>
+                <default>false</default>
+                <label>Adjuntas</label>
+            </value>
+            <value>
+                <fullName>Aeropuerto</fullName>
+                <default>false</default>
+                <label>Aeropuerto</label>
+            </value>
+            <value>
+                <fullName>Aguada</fullName>
+                <default>false</default>
+                <label>Aguada</label>
+            </value>
+            <value>
+                <fullName>Aguadilla Mall</fullName>
+                <default>false</default>
+                <label>Aguadilla Mall</label>
+            </value>
+            <value>
+                <fullName>Aguadilla Sur</fullName>
+                <default>false</default>
+                <label>Aguadilla Sur</label>
+            </value>
+            <value>
+                <fullName>Aguas Buenas</fullName>
+                <default>false</default>
+                <label>Aguas Buenas</label>
+            </value>
+            <value>
+                <fullName>Aibonito</fullName>
+                <default>false</default>
+                <label>Aibonito</label>
+            </value>
+            <value>
+                <fullName>Altamira</fullName>
+                <default>false</default>
+                <label>Altamira</label>
+            </value>
+            <value>
+                <fullName>Añasco</fullName>
+                <default>false</default>
+                <label>Añasco</label>
+            </value>
+            <value>
+                <fullName>Arecibo Aeropuerto</fullName>
+                <default>false</default>
+                <label>Arecibo Aeropuerto</label>
+            </value>
+            <value>
+                <fullName>Arecibo Highway</fullName>
+                <default>false</default>
+                <label>Arecibo Highway</label>
+            </value>
+            <value>
+                <fullName>Arecibo San Luis</fullName>
+                <default>false</default>
+                <label>Arecibo San Luis</label>
+            </value>
+            <value>
+                <fullName>Arroyo</fullName>
+                <default>false</default>
+                <label>Arroyo</label>
+            </value>
+            <value>
+                <fullName>Ave. 65 Infantería Shopping Center</fullName>
+                <default>false</default>
+                <label>Ave. 65 Infantería Shopping Center</label>
+            </value>
+            <value>
+                <fullName>Barbosa</fullName>
+                <default>false</default>
+                <label>Barbosa</label>
+            </value>
+            <value>
+                <fullName>Barceloneta Prime Outlets</fullName>
+                <default>false</default>
+                <label>Barceloneta Prime Outlets</label>
+            </value>
+            <value>
+                <fullName>Barranquitas</fullName>
+                <default>false</default>
+                <label>Barranquitas</label>
+            </value>
+            <value>
+                <fullName>Barrio Obrero</fullName>
+                <default>false</default>
+                <label>Barrio Obrero</label>
+            </value>
+            <value>
+                <fullName>Bayamón Center</fullName>
+                <default>false</default>
+                <label>Bayamón Center</label>
+            </value>
+            <value>
+                <fullName>Bayamón Oeste</fullName>
+                <default>false</default>
+                <label>Bayamón Oeste</label>
+            </value>
+            <value>
+                <fullName>Buchanan</fullName>
+                <default>false</default>
+                <label>Buchanan</label>
+            </value>
+            <value>
+                <fullName>Cabo Rojo La Hacienda</fullName>
+                <default>false</default>
+                <label>Cabo Rojo La Hacienda</label>
+            </value>
+            <value>
+                <fullName>Caguas Pueblo</fullName>
+                <default>false</default>
+                <label>Caguas Pueblo</label>
+            </value>
+            <value>
+                <fullName>Calle Loíza</fullName>
+                <default>false</default>
+                <label>Calle Loíza</label>
+            </value>
+            <value>
+                <fullName>Campo Rico</fullName>
+                <default>false</default>
+                <label>Campo Rico</label>
+            </value>
+            <value>
+                <fullName>Camuy</fullName>
+                <default>false</default>
+                <label>Camuy</label>
+            </value>
+            <value>
+                <fullName>Canovanas Outlet</fullName>
+                <default>false</default>
+                <label>Canovanas Outlet</label>
+            </value>
+            <value>
+                <fullName>Caparra Center</fullName>
+                <default>false</default>
+                <label>Caparra Center</label>
+            </value>
+            <value>
+                <fullName>Carolina Highway</fullName>
+                <default>false</default>
+                <label>Carolina Highway</label>
+            </value>
+            <value>
+                <fullName>Cayey Montellano</fullName>
+                <default>false</default>
+                <label>Cayey Montellano</label>
+            </value>
+            <value>
+                <fullName>Ceiba</fullName>
+                <default>false</default>
+                <label>Ceiba</label>
+            </value>
+            <value>
+                <fullName>Centro Del Sur</fullName>
+                <default>false</default>
+                <label>Centro Del Sur</label>
+            </value>
+            <value>
+                <fullName>Centro Medico</fullName>
+                <default>false</default>
+                <label>Centro Medico</label>
+            </value>
+            <value>
+                <fullName>Ciales</fullName>
+                <default>false</default>
+                <label>Ciales</label>
+            </value>
+            <value>
+                <fullName>Cidra</fullName>
+                <default>false</default>
+                <label>Cidra</label>
+            </value>
+            <value>
+                <fullName>Coamo</fullName>
+                <default>false</default>
+                <label>Coamo</label>
+            </value>
+            <value>
+                <fullName>Comerio</fullName>
+                <default>false</default>
+                <label>Comerio</label>
+            </value>
+            <value>
+                <fullName>Condadito</fullName>
+                <default>false</default>
+                <label>Condadito</label>
+            </value>
+            <value>
+                <fullName>Condado Centro</fullName>
+                <default>false</default>
+                <label>Condado Centro</label>
+            </value>
+            <value>
+                <fullName>Condado Gallery</fullName>
+                <default>false</default>
+                <label>Condado Gallery</label>
+            </value>
+            <value>
+                <fullName>Corozal</fullName>
+                <default>false</default>
+                <label>Corozal</label>
+            </value>
+            <value>
+                <fullName>Cruce Davila</fullName>
+                <default>false</default>
+                <label>Cruce Davila</label>
+            </value>
+            <value>
+                <fullName>Culebra</fullName>
+                <default>false</default>
+                <label>Culebra</label>
+            </value>
+            <value>
+                <fullName>Cupey Center</fullName>
+                <default>false</default>
+                <label>Cupey Center</label>
+            </value>
+            <value>
+                <fullName>Econo Manatí</fullName>
+                <default>false</default>
+                <label>Econo Manatí</label>
+            </value>
+            <value>
+                <fullName>El Mercado Plaza</fullName>
+                <default>false</default>
+                <label>El Mercado Plaza</label>
+            </value>
+            <value>
+                <fullName>El Señorial Center</fullName>
+                <default>false</default>
+                <label>El Señorial Center</label>
+            </value>
+            <value>
+                <fullName>El Señorial Mall</fullName>
+                <default>false</default>
+                <label>El Señorial Mall</label>
+            </value>
+            <value>
+                <fullName>Exp Garden Hills</fullName>
+                <default>false</default>
+                <label>Exp Garden Hills</label>
+            </value>
+            <value>
+                <fullName>Fajardo</fullName>
+                <default>false</default>
+                <label>Fajardo</label>
+            </value>
+            <value>
+                <fullName>Florida</fullName>
+                <default>false</default>
+                <label>Florida</label>
+            </value>
+            <value>
+                <fullName>Galería Paseos</fullName>
+                <default>false</default>
+                <label>Galería Paseos</label>
+            </value>
+            <value>
+                <fullName>Guayama Mall</fullName>
+                <default>false</default>
+                <label>Guayama Mall</label>
+            </value>
+            <value>
+                <fullName>Guayanilla</fullName>
+                <default>false</default>
+                <label>Guayanilla</label>
+            </value>
+            <value>
+                <fullName>Guaynabo Las Cumbres</fullName>
+                <default>false</default>
+                <label>Guaynabo Las Cumbres</label>
+            </value>
+            <value>
+                <fullName>Gurabo</fullName>
+                <default>false</default>
+                <label>Gurabo</label>
+            </value>
+            <value>
+                <fullName>Hatillo</fullName>
+                <default>false</default>
+                <label>Hatillo</label>
+            </value>
+            <value>
+                <fullName>Hormigueros</fullName>
+                <default>false</default>
+                <label>Hormigueros</label>
+            </value>
+            <value>
+                <fullName>Humacao Este</fullName>
+                <default>false</default>
+                <label>Humacao Este</label>
+            </value>
+            <value>
+                <fullName>Humacao Palma Real</fullName>
+                <default>false</default>
+                <label>Humacao Palma Real</label>
+            </value>
+            <value>
+                <fullName>Isabela</fullName>
+                <default>false</default>
+                <label>Isabela</label>
+            </value>
+            <value>
+                <fullName>Isla Verde</fullName>
+                <default>false</default>
+                <label>Isla Verde</label>
+            </value>
+            <value>
+                <fullName>Jayuya</fullName>
+                <default>false</default>
+                <label>Jayuya</label>
+            </value>
+            <value>
+                <fullName>Juana Díaz</fullName>
+                <default>false</default>
+                <label>Juana Díaz</label>
+            </value>
+            <value>
+                <fullName>Lajas</fullName>
+                <default>false</default>
+                <label>Lajas</label>
+            </value>
+            <value>
+                <fullName>Lares</fullName>
+                <default>false</default>
+                <label>Lares</label>
+            </value>
+            <value>
+                <fullName>Las Catalinas</fullName>
+                <default>false</default>
+                <label>Las Catalinas</label>
+            </value>
+            <value>
+                <fullName>Las Marías</fullName>
+                <default>false</default>
+                <label>Las Marías</label>
+            </value>
+            <value>
+                <fullName>Las Piedras</fullName>
+                <default>false</default>
+                <label>Las Piedras</label>
+            </value>
+            <value>
+                <fullName>Levittown</fullName>
+                <default>false</default>
+                <label>Levittown</label>
+            </value>
+            <value>
+                <fullName>Loíza</fullName>
+                <default>false</default>
+                <label>Loíza</label>
+            </value>
+            <value>
+                <fullName>Lomas Verdes</fullName>
+                <default>false</default>
+                <label>Lomas Verdes</label>
+            </value>
+            <value>
+                <fullName>Los Colobos Shopping Center</fullName>
+                <default>false</default>
+                <label>Los Colobos Shopping Center</label>
+            </value>
+            <value>
+                <fullName>Luquillo</fullName>
+                <default>false</default>
+                <label>Luquillo</label>
+            </value>
+            <value>
+                <fullName>Mall Of San Juan</fullName>
+                <default>false</default>
+                <label>Mall Of San Juan</label>
+            </value>
+            <value>
+                <fullName>Manatí Popular Center</fullName>
+                <default>false</default>
+                <label>Manatí Popular Center</label>
+            </value>
+            <value>
+                <fullName>Maricao</fullName>
+                <default>false</default>
+                <label>Maricao</label>
+            </value>
+            <value>
+                <fullName>Maunabo</fullName>
+                <default>false</default>
+                <label>Maunabo</label>
+            </value>
+            <value>
+                <fullName>Mayagüez Mall Centro</fullName>
+                <default>false</default>
+                <label>Mayagüez Mall Centro</label>
+            </value>
+            <value>
+                <fullName>Mayagüez Mall Sur</fullName>
+                <default>false</default>
+                <label>Mayagüez Mall Sur</label>
+            </value>
+            <value>
+                <fullName>Mayagüez Suau</fullName>
+                <default>false</default>
+                <label>Mayagüez Suau</label>
+            </value>
+            <value>
+                <fullName>Mendez Vigo</fullName>
+                <default>false</default>
+                <label>Mendez Vigo</label>
+            </value>
+            <value>
+                <fullName>Miramar</fullName>
+                <default>false</default>
+                <label>Miramar</label>
+            </value>
+            <value>
+                <fullName>Moca</fullName>
+                <default>false</default>
+                <label>Moca</label>
+            </value>
+            <value>
+                <fullName>Montehiedra</fullName>
+                <default>false</default>
+                <label>Montehiedra</label>
+            </value>
+            <value>
+                <fullName>Morovis</fullName>
+                <default>false</default>
+                <label>Morovis</label>
+            </value>
+            <value>
+                <fullName>Muñoz Rivera</fullName>
+                <default>false</default>
+                <label>Muñoz Rivera</label>
+            </value>
+            <value>
+                <fullName>Naguabo</fullName>
+                <default>false</default>
+                <label>Naguabo</label>
+            </value>
+            <value>
+                <fullName>Orocovis</fullName>
+                <default>false</default>
+                <label>Orocovis</label>
+            </value>
+            <value>
+                <fullName>Palmas Del Mar</fullName>
+                <default>false</default>
+                <label>Palmas Del Mar</label>
+            </value>
+            <value>
+                <fullName>Parada 22</fullName>
+                <default>false</default>
+                <label>Parada 22</label>
+            </value>
+            <value>
+                <fullName>Parada 26</fullName>
+                <default>false</default>
+                <label>Parada 26</label>
+            </value>
+            <value>
+                <fullName>Parada 34</fullName>
+                <default>false</default>
+                <label>Parada 34</label>
+            </value>
+            <value>
+                <fullName>Parque Escorial</fullName>
+                <default>false</default>
+                <label>Parque Escorial</label>
+            </value>
+            <value>
+                <fullName>Patillas</fullName>
+                <default>false</default>
+                <label>Patillas</label>
+            </value>
+            <value>
+                <fullName>Peñuelas</fullName>
+                <default>false</default>
+                <label>Peñuelas</label>
+            </value>
+            <value>
+                <fullName>Plaza Carolina</fullName>
+                <default>false</default>
+                <label>Plaza Carolina</label>
+            </value>
+            <value>
+                <fullName>Plaza Centro II</fullName>
+                <default>false</default>
+                <label>Plaza Centro II</label>
+            </value>
+            <value>
+                <fullName>Plaza Del Caribe</fullName>
+                <default>false</default>
+                <label>Plaza Del Caribe</label>
+            </value>
+            <value>
+                <fullName>Plaza Del Mercado</fullName>
+                <default>false</default>
+                <label>Plaza Del Mercado</label>
+            </value>
+            <value>
+                <fullName>Plaza Del Sol</fullName>
+                <default>false</default>
+                <label>Plaza Del Sol</label>
+            </value>
+            <value>
+                <fullName>Plaza Del Yunque</fullName>
+                <default>false</default>
+                <label>Plaza Del Yunque</label>
+            </value>
+            <value>
+                <fullName>Plaza Dorada</fullName>
+                <default>false</default>
+                <label>Plaza Dorada</label>
+            </value>
+            <value>
+                <fullName>Plaza Guaynabo</fullName>
+                <default>false</default>
+                <label>Plaza Guaynabo</label>
+            </value>
+            <value>
+                <fullName>Plaza Las Américas</fullName>
+                <default>false</default>
+                <label>Plaza Las Américas</label>
+            </value>
+            <value>
+                <fullName>Plaza Los Prados</fullName>
+                <default>false</default>
+                <label>Plaza Los Prados</label>
+            </value>
+            <value>
+                <fullName>Ponce El Monte</fullName>
+                <default>false</default>
+                <label>Ponce El Monte</label>
+            </value>
+            <value>
+                <fullName>Ponce Plaza</fullName>
+                <default>false</default>
+                <label>Ponce Plaza</label>
+            </value>
+            <value>
+                <fullName>Ponce Rambla</fullName>
+                <default>false</default>
+                <label>Ponce Rambla</label>
+            </value>
+            <value>
+                <fullName>Ponce Towne Center Norte</fullName>
+                <default>false</default>
+                <label>Ponce Towne Center Norte</label>
+            </value>
+            <value>
+                <fullName>Ponce Towne Center Sur</fullName>
+                <default>false</default>
+                <label>Ponce Towne Center Sur</label>
+            </value>
+            <value>
+                <fullName>Popular Center</fullName>
+                <default>false</default>
+                <label>Popular Center</label>
+            </value>
+            <value>
+                <fullName>Puerto Nuevo</fullName>
+                <default>false</default>
+                <label>Puerto Nuevo</label>
+            </value>
+            <value>
+                <fullName>Quebradillas</fullName>
+                <default>false</default>
+                <label>Quebradillas</label>
+            </value>
+            <value>
+                <fullName>Ramey</fullName>
+                <default>false</default>
+                <label>Ramey</label>
+            </value>
+            <value>
+                <fullName>Reparto Metropolitano</fullName>
+                <default>false</default>
+                <label>Reparto Metropolitano</label>
+            </value>
+            <value>
+                <fullName>Rexville Town Center</fullName>
+                <default>false</default>
+                <label>Rexville Town Center</label>
+            </value>
+            <value>
+                <fullName>RFW Bairoa</fullName>
+                <default>false</default>
+                <label>RFW Bairoa</label>
+            </value>
+            <value>
+                <fullName>RFW Juncos</fullName>
+                <default>false</default>
+                <label>RFW Juncos</label>
+            </value>
+            <value>
+                <fullName>Rincón</fullName>
+                <default>false</default>
+                <label>Rincón</label>
+            </value>
+            <value>
+                <fullName>Rio Grande Pueblo</fullName>
+                <default>false</default>
+                <label>Rio Grande Pueblo</label>
+            </value>
+            <value>
+                <fullName>Rio Hondo</fullName>
+                <default>false</default>
+                <label>Rio Hondo</label>
+            </value>
+            <value>
+                <fullName>RUM</fullName>
+                <default>false</default>
+                <label>RUM</label>
+            </value>
+            <value>
+                <fullName>Sabana Grande</fullName>
+                <default>false</default>
+                <label>Sabana Grande</label>
+            </value>
+            <value>
+                <fullName>Salinas</fullName>
+                <default>false</default>
+                <label>Salinas</label>
+            </value>
+            <value>
+                <fullName>San Alfonso</fullName>
+                <default>false</default>
+                <label>San Alfonso</label>
+            </value>
+            <value>
+                <fullName>San Francisco</fullName>
+                <default>false</default>
+                <label>San Francisco</label>
+            </value>
+            <value>
+                <fullName>San Germán Plaza Del Oeste</fullName>
+                <default>false</default>
+                <label>San Germán Plaza Del Oeste</label>
+            </value>
+            <value>
+                <fullName>San José</fullName>
+                <default>false</default>
+                <label>San José</label>
+            </value>
+            <value>
+                <fullName>San Juan</fullName>
+                <default>false</default>
+                <label>San Juan</label>
+            </value>
+            <value>
+                <fullName>San Juan Los Puertos</fullName>
+                <default>false</default>
+                <label>San Juan Los Puertos</label>
+            </value>
+            <value>
+                <fullName>San Lorenzo</fullName>
+                <default>false</default>
+                <label>San Lorenzo</label>
+            </value>
+            <value>
+                <fullName>San Patricio Gallery</fullName>
+                <default>false</default>
+                <label>San Patricio Gallery</label>
+            </value>
+            <value>
+                <fullName>San Patricio Mall</fullName>
+                <default>false</default>
+                <label>San Patricio Mall</label>
+            </value>
+            <value>
+                <fullName>San Sebastian</fullName>
+                <default>false</default>
+                <label>San Sebastian</label>
+            </value>
+            <value>
+                <fullName>Santa Isabel</fullName>
+                <default>false</default>
+                <label>Santa Isabel</label>
+            </value>
+            <value>
+                <fullName>Santa Rosa</fullName>
+                <default>false</default>
+                <label>Santa Rosa</label>
+            </value>
+            <value>
+                <fullName>Toa Alta</fullName>
+                <default>false</default>
+                <label>Toa Alta</label>
+            </value>
+            <value>
+                <fullName>Toa Baja</fullName>
+                <default>false</default>
+                <label>Toa Baja</label>
+            </value>
+            <value>
+                <fullName>Trujillo Alto</fullName>
+                <default>false</default>
+                <label>Trujillo Alto</label>
+            </value>
+            <value>
+                <fullName>Trujillo Alto Shopping</fullName>
+                <default>false</default>
+                <label>Trujillo Alto Shopping</label>
+            </value>
+            <value>
+                <fullName>Universidad</fullName>
+                <default>false</default>
+                <label>Universidad</label>
+            </value>
+            <value>
+                <fullName>Utuado</fullName>
+                <default>false</default>
+                <label>Utuado</label>
+            </value>
+            <value>
+                <fullName>Valencia Park</fullName>
+                <default>false</default>
+                <label>Valencia Park</label>
+            </value>
+            <value>
+                <fullName>Vega Alta</fullName>
+                <default>false</default>
+                <label>Vega Alta</label>
+            </value>
+            <value>
+                <fullName>Vega Baja</fullName>
+                <default>false</default>
+                <label>Vega Baja</label>
+            </value>
+            <value>
+                <fullName>Vieques</fullName>
+                <default>false</default>
+                <label>Vieques</label>
+            </value>
+            <value>
+                <fullName>Villalba</fullName>
+                <default>false</default>
+                <label>Villalba</label>
+            </value>
+            <value>
+                <fullName>Walmart Cayey</fullName>
+                <default>false</default>
+                <label>Walmart Cayey</label>
+            </value>
+            <value>
+                <fullName>Walmart Parada 18</fullName>
+                <default>false</default>
+                <label>Walmart Parada 18</label>
+            </value>
+            <value>
+                <fullName>Yabucoa</fullName>
+                <default>false</default>
+                <label>Yabucoa</label>
+            </value>
+            <value>
+                <fullName>Yauco Plaza</fullName>
+                <default>false</default>
+                <label>Yauco Plaza</label>
+            </value>
+            <value>
+                <fullName>Yauco Pueblo</fullName>
+                <default>false</default>
+                <label>Yauco Pueblo</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Mayagüez</controllingFieldValue>
+            <valueName>Mayagüez Mall Centro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mayagüez</controllingFieldValue>
+            <valueName>Mayagüez Mall Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mayagüez</controllingFieldValue>
+            <valueName>Mayagüez Suau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mayagüez</controllingFieldValue>
+            <valueName>Mendez Vigo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mayagüez</controllingFieldValue>
+            <valueName>RUM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Moca</controllingFieldValue>
+            <valueName>Moca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Morovis</controllingFieldValue>
+            <valueName>Morovis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Naguabo</controllingFieldValue>
+            <valueName>Naguabo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Naranjito</controllingFieldValue>
+            <valueName>El Mercado Plaza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Centro Del Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Plaza Del Caribe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Ponce El Monte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Ponce Plaza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Ponce Rambla</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Ponce Towne Center Norte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ponce</controllingFieldValue>
+            <valueName>Ponce Towne Center Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Patillas</controllingFieldValue>
+            <valueName>Patillas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Peñuelas</controllingFieldValue>
+            <valueName>Peñuelas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quebradillas</controllingFieldValue>
+            <valueName>Quebradillas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rincón</controllingFieldValue>
+            <valueName>Rincón</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barranquitas</controllingFieldValue>
+            <valueName>Barranquitas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rio Grande</controllingFieldValue>
+            <valueName>Plaza Del Yunque</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rio Grande</controllingFieldValue>
+            <valueName>Rio Grande Pueblo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Bayamón Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Bayamón Oeste</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Lomas Verdes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Plaza Del Sol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Rexville Town Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Rio Hondo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bayamón</controllingFieldValue>
+            <valueName>Santa Rosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cabo Rojo</controllingFieldValue>
+            <valueName>Cabo Rojo La Hacienda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Salinas</controllingFieldValue>
+            <valueName>Salinas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Camuy</controllingFieldValue>
+            <valueName>Camuy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Germán</controllingFieldValue>
+            <valueName>San Germán Plaza Del Oeste</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canóvanas</controllingFieldValue>
+            <valueName>Canovanas Outlet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Altamira</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Barbosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Barrio Obrero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Calle Loíza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Caparra Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Centro Medico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Condado Centro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Condado Gallery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Cupey Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>El Señorial Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>El Señorial Mall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Galería Paseos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Mall Of San Juan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Miramar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Montehiedra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Muñoz Rivera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Parada 22</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Parada 26</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Parada 34</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Plaza Del Mercado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Plaza Las Américas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Popular Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Puerto Nuevo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Reparto Metropolitano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>San Francisco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>San José</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>San Juan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>San Juan Los Puertos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Universidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Valencia Park</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Juan</controllingFieldValue>
+            <valueName>Walmart Parada 18</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>Caguas Pueblo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>Condadito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>Las Catalinas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>Plaza Centro II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>Plaza Los Prados</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>RFW Bairoa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Caguas</controllingFieldValue>
+            <valueName>San Alfonso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Lorenzo</controllingFieldValue>
+            <valueName>San Lorenzo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ciales</controllingFieldValue>
+            <valueName>Ciales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cidra</controllingFieldValue>
+            <valueName>Cidra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coamo</controllingFieldValue>
+            <valueName>Coamo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Comerio</controllingFieldValue>
+            <valueName>Comerio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Añasco</controllingFieldValue>
+            <valueName>Añasco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aguas Buenas</controllingFieldValue>
+            <valueName>Aguas Buenas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adjuntas</controllingFieldValue>
+            <valueName>Adjuntas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aguada</controllingFieldValue>
+            <valueName>Aguada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aguadilla</controllingFieldValue>
+            <valueName>Aguadilla Mall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aguadilla</controllingFieldValue>
+            <valueName>Aguadilla Sur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aguadilla</controllingFieldValue>
+            <valueName>Ramey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aibonito</controllingFieldValue>
+            <valueName>Aibonito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arecibo</controllingFieldValue>
+            <valueName>Arecibo Aeropuerto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arecibo</controllingFieldValue>
+            <valueName>Arecibo Highway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arecibo</controllingFieldValue>
+            <valueName>Arecibo San Luis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arroyo</controllingFieldValue>
+            <valueName>Arroyo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barceloneta</controllingFieldValue>
+            <valueName>Barceloneta Prime Outlets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barceloneta</controllingFieldValue>
+            <valueName>Cruce Davila</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Sebastián</controllingFieldValue>
+            <valueName>San Sebastian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Santa Isabel</controllingFieldValue>
+            <valueName>Santa Isabel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Toa Alta</controllingFieldValue>
+            <valueName>Toa Alta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Toa Baja</controllingFieldValue>
+            <valueName>Levittown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Toa Baja</controllingFieldValue>
+            <valueName>Toa Baja</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corozal</controllingFieldValue>
+            <valueName>Corozal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trujillo Alto</controllingFieldValue>
+            <valueName>Trujillo Alto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trujillo Alto</controllingFieldValue>
+            <valueName>Trujillo Alto Shopping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Culebra</controllingFieldValue>
+            <valueName>Culebra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Utuado</controllingFieldValue>
+            <valueName>Utuado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dorado</controllingFieldValue>
+            <valueName>Plaza Dorada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vega Alta</controllingFieldValue>
+            <valueName>Vega Alta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fajardo</controllingFieldValue>
+            <valueName>Fajardo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vega Baja</controllingFieldValue>
+            <valueName>Vega Baja</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Florida</controllingFieldValue>
+            <valueName>Florida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vieques</controllingFieldValue>
+            <valueName>Vieques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guayanilla</controllingFieldValue>
+            <valueName>Guayanilla</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Villalba</controllingFieldValue>
+            <valueName>Villalba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guayama</controllingFieldValue>
+            <valueName>Guayama Mall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gurabo</controllingFieldValue>
+            <valueName>Gurabo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hatillo</controllingFieldValue>
+            <valueName>Hatillo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hormigueros</controllingFieldValue>
+            <valueName>Hormigueros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yabucoa</controllingFieldValue>
+            <valueName>Yabucoa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cayey</controllingFieldValue>
+            <valueName>Cayey Montellano</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cayey</controllingFieldValue>
+            <valueName>Walmart Cayey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ceiba</controllingFieldValue>
+            <valueName>Ceiba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orocovis</controllingFieldValue>
+            <valueName>Orocovis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Humacao</controllingFieldValue>
+            <valueName>Humacao Este</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Humacao</controllingFieldValue>
+            <valueName>Humacao Palma Real</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Humacao</controllingFieldValue>
+            <valueName>Palmas Del Mar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manatí</controllingFieldValue>
+            <valueName>Econo Manatí</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manatí</controllingFieldValue>
+            <valueName>Manatí Popular Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Aeropuerto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Ave. 65 Infantería Shopping Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Campo Rico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Carolina Highway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Isla Verde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Los Colobos Shopping Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Parque Escorial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Carolina</controllingFieldValue>
+            <valueName>Plaza Carolina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Isabela</controllingFieldValue>
+            <valueName>Isabela</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guaynabo</controllingFieldValue>
+            <valueName>Buchanan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guaynabo</controllingFieldValue>
+            <valueName>Exp Garden Hills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guaynabo</controllingFieldValue>
+            <valueName>Guaynabo Las Cumbres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guaynabo</controllingFieldValue>
+            <valueName>Plaza Guaynabo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guaynabo</controllingFieldValue>
+            <valueName>San Patricio Gallery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guaynabo</controllingFieldValue>
+            <valueName>San Patricio Mall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Juncos</controllingFieldValue>
+            <valueName>RFW Juncos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sabana Grande</controllingFieldValue>
+            <valueName>Sabana Grande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Juana Díaz</controllingFieldValue>
+            <valueName>Juana Díaz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Jayuya</controllingFieldValue>
+            <valueName>Jayuya</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lares</controllingFieldValue>
+            <valueName>Lares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lajas</controllingFieldValue>
+            <valueName>Lajas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Las Marías</controllingFieldValue>
+            <valueName>Las Marías</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Las Piedras</controllingFieldValue>
+            <valueName>Las Piedras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loíza</controllingFieldValue>
+            <valueName>Loíza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Luquillo</controllingFieldValue>
+            <valueName>Luquillo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maricao</controllingFieldValue>
+            <valueName>Maricao</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maunabo</controllingFieldValue>
+            <valueName>Maunabo</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

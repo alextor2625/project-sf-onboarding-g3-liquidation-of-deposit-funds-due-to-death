@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approved_Deposite_Alert</fullName>
+        <description>Approved Deposite Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approved_Deposit_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Approved_Deposite_Alert_Spanish</fullName>
+        <description>Approved Deposite Alert Spanish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approved_Deposit_Espanol</template>
+    </alerts>
+    <alerts>
+        <fullName>Approved_Pickup_Check</fullName>
+        <description>Approved Pickup Check</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approved_Pickup_Check_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Approved_Pickup_Check_Spanish</fullName>
+        <description>Approved Pickup Check Spanish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Approved_PickUp_Espanol</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Creation_Confirmation_Email</fullName>
+        <description>Case Creation Confirmation Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Case_Confirmation_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Creation_Confirmation_Email_Spanish</fullName>
+        <description>Case Creation Confirmation Email Spanish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Case_Confirmation_Espanol</template>
+    </alerts>
+    <alerts>
+        <fullName>Denied</fullName>
+        <description>Denied</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Denied_Incomplete_Wrong_Information_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Denied_Funds_Exceed_15k</fullName>
+        <description>Denied-Funds Exceed 15k</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Denied_Funds_Exceed_15K_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Denied_Funds_Exceed_15k_Spanish</fullName>
+        <description>Denied-Funds Exceed 15k Spanish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Denied_Exceed_15k_Espanol</template>
+    </alerts>
+    <alerts>
+        <fullName>Denied_No_Available_Funds_Email</fullName>
+        <description>Denied- No Available Funds Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Denied_No_Available_Funds_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Denied_No_Available_Funds_Email_Spanish</fullName>
+        <description>Denied- No Available Funds Email Spanish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Denied_No_funds_Spanish</template>
+    </alerts>
+    <alerts>
+        <fullName>Denied_Spanish</fullName>
+        <description>Denied Spanish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Denied_Spanish</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

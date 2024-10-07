@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Status__c</fullName>
+    <label>Resolution Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Denied-Funds Exceed $15k</fullName>
+                <default>false</default>
+                <label>Denied-Funds Exceed $15k</label>
+            </value>
+            <value>
+                <fullName>Denied-No Funds Available</fullName>
+                <default>false</default>
+                <label>Denied-No Funds Available</label>
+            </value>
+            <value>
+                <fullName>Approved-Deposit</fullName>
+                <default>false</default>
+                <label>Approved-Deposit</label>
+            </value>
+            <value>
+                <fullName>Approved-Pickup Check</fullName>
+                <default>false</default>
+                <label>Approved-Pickup Check</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

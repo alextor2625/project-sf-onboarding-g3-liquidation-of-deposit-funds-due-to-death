@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Registered Users</audienceName>
+    <container>Liquidation of Deposit Funds Portal</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <profile>liqdfnds portal user</profile>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>Profile</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>cfc93cdc-0dcf-42c6-9c60-fbc4ba6e1d60</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Case_Detail_Custom_Case_Detail_Page</targetValue>
+        </target>
+        <target>
+            <groupName>904a2425-d7f8-4c37-a623-b1d0b3e0b172</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>User_Profile_Custom_User_Profile_Page</targetValue>
+        </target>
+        <target>
+            <groupName>ff575c6f-ec95-4a7d-ba4e-9385fe70291f</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Home_New_Home_Test_Page</targetValue>
+        </target>
+    </targets>
+</Audience>

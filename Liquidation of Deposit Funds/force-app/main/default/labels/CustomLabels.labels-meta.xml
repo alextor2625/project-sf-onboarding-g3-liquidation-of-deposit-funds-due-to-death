@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Additional_Required_Docs_1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Additional Required Docs 1</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Additional Required Documents&quot;,
+&quot;t2&quot;:&quot;Is there a Will?&quot;,
+&quot;t3&quot;:&quot;Resolution of Declaration of heirs&quot;,
+&quot;t4&quot;:&quot;Upload Document&quot;,
+&quot;t5&quot;:&quot;Will&quot;,
+&quot;t6&quot;:&quot;Certification from the Registro de Poderes y Testamentos&quot;,
+&quot;t7&quot;:&quot;Resolution of Testamentary Letters, if executor is representing the estate&quot;,
+&quot;t8&quot;:&quot;Last Will and Testament&quot;,
+&quot;t9&quot;:&quot;Letters of Administration granted by Surrogate of Probate Court or substitute document, in case of Small State Procedure&quot;,
+&quot;t10&quot;:&quot;Certificate of Release of Tax Lien with the Estate Tax Return, including Detalles de Bienes addendum&quot;,
+&quot;t11&quot;:&quot;Upload Popular&apos;s Document: Requirements for Advancement or Disbursement of Deceased Customer Funds&quot;,
+&quot;t12&quot;:&quot;Select an answer&quot;,
+&quot;t13&quot;:&quot;Yes, Will in PR&quot;,
+&quot;t14&quot;:&quot;Yes, Will in USA&quot;,
+&quot;t15&quot;:&quot;No, without Will&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Deceased_Customer_Info</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Deceased Customer Info</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Deceased customer information&quot;,
+&quot;t2&quot;:&quot;First Name&quot;,
+&quot;t3&quot;:&quot;Last Name&quot;,
+&quot;t4&quot;:&quot;Social Security Number&quot;,
+&quot;t5&quot;:&quot;Date Of Death&quot;,
+&quot;t6&quot;:&quot;Upload Death Certificate&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Disbursement_Info_1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Disbursement Info 1</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Disbursement Information&quot;,
+&quot;t2&quot;:&quot;Disbursement Preference: Account deposit is only available for Popular accounts&quot;,
+&quot;t3&quot;:&quot;Account Holder Name&quot;,
+&quot;t4&quot;:&quot;Account Number&quot;,
+&quot;t5&quot;:&quot;Popular Document where heirs authorized to disburse in the account&quot;,
+&quot;t6&quot;:&quot;Upload Document&quot;,
+&quot;t7&quot;:&quot;Pick the branch town you wish to pick-up check:&quot;,
+&quot;t8&quot;:&quot;Pick the branch you wish to pick-up check:&quot;,
+&quot;t9&quot;:&quot;Select Branch&quot;,
+&quot;t10&quot;:&quot;Will all heirs be present when the picking-up the check?&quot;,
+&quot;t11&quot;:&quot;Where is located the heir that cant be present at the moment of picking-up the check? (Select all that apply)&quot;,
+&quot;t12&quot;:&quot;Affidavit or Power of Attorney issued in Puerto Rico authorizing a third party to receive, endorse and/or exchange check because of the transaction&quot;,
+&quot;t13&quot;:&quot;Affidavit or Power of Attorney issued in United States and a Country Clerk Certificate from issuance state&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Disbursement_Info_2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Disbursement Info 2</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Apostille (note or explanatory letter) from the issuance country&quot;,
+&quot;t2&quot;:&quot;Military Power&quot;,
+&quot;t3&quot;:&quot;Is the sum of all account balances at the death date was greater than $15K?&quot;,
+&quot;t4&quot;:&quot;If the disbursement amount is greater than $15,000 upon death, a Certificate of Release of Tax Lien will be required.&quot;,
+&quot;t5&quot;:&quot;If the balance at the date of death is greater than $15K, a Certificate of Release of Tax Lien with the Estate Tax Return will be required and will need submit a new request. We recommend that you request a certification of bank relationship. Click&quot;,
+&quot;t6&quot;:&quot;here&quot;,
+&quot;t7&quot;:&quot;to learn how to request certification.&quot;,
+&quot;t8&quot;:&quot;Select Yes/No/Dont know&quot;,
+&quot;t9&quot;:&quot;Yes&quot;,
+&quot;t11&quot;:&quot;Dont know&quot;,
+&quot;t12&quot;:&quot;Select Disbursement preference&quot;,
+&quot;t13&quot;:&quot;Account deposit&quot;,
+&quot;t14&quot;:&quot;Pick-up at branch&quot;,
+&quot;t15&quot;:&quot;Select Yes/No&quot;,
+&quot;t16&quot;:&quot;Active Duty in US Armed Forces&quot;,
+&quot;t17&quot;:&quot;United States&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Disbursement_Info_3</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Disbursement Info 3</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Select Town&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Portal_Hero</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Portal Hero</shortDescription>
+        <value>Liquidation of Funds Request</value>
+    </labels>
+    <labels>
+        <fullName>Process_Form</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Process Form</shortDescription>
+        <value>{&quot;t1&quot;:&quot;I have read and accept the legal notification above.&quot;,
+&quot;t2&quot;:&quot;Submit&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Process_Info_1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Process Info 1</shortDescription>
+        <value>{&quot;t1&quot;:&quot;We are sorry for your loss, and we are here to support you during this difficult time.&quot;,
+&quot;t2&quot;:&quot;What is your request?&quot;,
+&quot;t3&quot;:&quot;Continue&quot;,
+&quot;t4&quot;:&quot;Continue&quot;,
+&quot;t5&quot;:&quot;Select request type&quot;,
+&quot;t6&quot;:&quot;Advance Funds For Unpaid Funeral Expenses&quot;,
+&quot;t7&quot;:&quot;General Advance Of Available Funds Or Certification Of Bank&quot;,
+&quot;t8&quot;:&quot;Liquidation of Funds&quot;,
+&quot;t9&quot;:&quot;Please verify the documents required below.&quot;,
+&quot;t10&quot;:&quot;By clicking continue you will be redirected to another page.&quot;,
+&quot;t11&quot;:&quot;This Request Type is not available at this time.&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Requestor_Info</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Requestor Info</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Requestor Information&quot;,
+&quot;t2&quot;:&quot;First Name&quot;,
+&quot;t3&quot;:&quot;Last Name&quot;,
+&quot;t4&quot;:&quot;Relationship&quot;,
+&quot;t5&quot;:&quot;Email&quot;,
+&quot;t6&quot;:&quot;Preferred Phone Number&quot;,
+&quot;t7&quot;:&quot;Other Phone Number&quot;,
+&quot;t8&quot;:&quot;Father&quot;,
+&quot;t9&quot;:&quot;Mother&quot;,
+&quot;t10&quot;:&quot;Brother&quot;,
+&quot;t11&quot;:&quot;Sister&quot;,
+&quot;t12&quot;:&quot;Son&quot;,
+&quot;t13&quot;:&quot;Daughter&quot;,
+&quot;t14&quot;:&quot;Grandfather&quot;,
+&quot;t15&quot;:&quot;Grandmother&quot;,
+&quot;t16&quot;:&quot;Grandson&quot;,
+&quot;t17&quot;:&quot;Granddaughter&quot;,
+&quot;t18&quot;:&quot;Uncle&quot;,
+&quot;t19&quot;:&quot;Aunt&quot;,
+&quot;t20&quot;:&quot;Nephew&quot;,
+&quot;t21&quot;:&quot;Niece&quot;,
+&quot;t22&quot;:&quot;Cousin&quot;,
+&quot;t23&quot;:&quot;Stepfather&quot;,
+&quot;t24&quot;:&quot;Stepmother&quot;,
+&quot;t25&quot;:&quot;Stepbrother&quot;,
+&quot;t26&quot;:&quot;Stepsister&quot;,
+&quot;t27&quot;:&quot;Husband&quot;,
+&quot;t28&quot;:&quot;Wife&quot;,
+&quot;t29&quot;:&quot;Fiancé&quot;,
+&quot;t30&quot;:&quot;Fiancée&quot;,
+&quot;t31&quot;:&quot;Spouse&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Required_Documents_Info_1</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required Documents Info 1</shortDescription>
+        <value>{&quot;t1&quot;:&quot;You can request a liquidation of funds, it is important that you have these documents before proceeding&quot;,
+&quot;t2&quot;:&quot;Death Certificate (original or copy)&quot;,
+&quot;t3&quot;:&quot;Will documents:&quot;,
+&quot;t4&quot;:&quot; Will in Puerto Rico:&quot;,
+&quot;t5&quot;:&quot;Will and the certification from the Registro de Poderes y Testamentos&quot;,
+&quot;t6&quot;:&quot;Resolution of Testamentary Letters in case of Executor representing the Estate, according to the Testament&quot;,
+&quot;t7&quot;:&quot; Will in USA&quot;,
+&quot;t8&quot;:&quot;Last Will and Testament&quot;,
+&quot;t9&quot;:&quot;Letters of Administration granted by Surrogate of Probate Court or substitute document, in case of Small Estate Procedure&quot;,
+&quot;t10&quot;:&quot; Without Will&quot;,
+&quot;t11&quot;:&quot;Resolution of Declaration of Heirs&quot;,
+&quot;t12&quot;:&quot;If the disbursement amount is greater than $15,000 Certificate of Release of Tax Lien with the Estate Tax Return that includes the Detalles de Bienes addendum&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Required_Documents_Info_2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required Documents Info 2</shortDescription>
+        <value>{&quot;t1&quot;:&quot;If you would like the disbursement to be submitted in a particular account you will need to upload &quot;,
+&quot;t3&quot;:&quot;If you are picking up the check in a Popular branch and not all of the heirs will be present, you will need the following documents depending on the location of the heir that will not be present:&quot;,
+&quot;t4&quot;:&quot;Active Duty in US Armed Forces&quot;,
+&quot;t5&quot;:&quot;, Military Power&quot;,
+&quot;t6&quot;:&quot;Foreign Country&quot;,
+&quot;t7&quot;:&quot;, Apostille (note or explanatory letter) from the issuing country&quot;,
+&quot;t8&quot;:&quot;, Affidavit or Power of Attorney issued in Puerto Rico authorizing a third party to receive, endorse, and/or exchange check because of the transaction&quot;,
+&quot;t9&quot;:&quot;United States&quot;,
+&quot;t10&quot;:&quot;, Affidavit or Power of Attorney issued in United States and a Country Clerk Certificate from the issuing state.&quot;,
+&quot;t11&quot;:&quot;Do you have all the documents required, detailed above?&quot;,
+&quot;t12&quot;:&quot;Continue&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>Required_Documents_Info_3</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required Documents Info 3</shortDescription>
+        <value>{&quot;t1&quot;:&quot;Select Yes/No&quot;,
+&quot;t2&quot;:&quot;Yes&quot;,
+&quot;t3&quot;:&quot;No&quot;,
+&quot;t4&quot;:&quot;By clicking continue you will be redirected to a registration page.&quot;,
+&quot;t5&quot;:&quot;In order to continue you must have the required documents.&quot;}</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "3f45c680-b936-41e5-9151-8eed39477a16",
+  "appPageId" : "98907862-17b5-428d-aaed-db1dababe189",
+  "configurationTags" : [ ],
+  "devName" : "Liquidation_Request_Page__c",
+  "id" : "e006dc81-3886-44da-bf2a-065c093ea6ea",
+  "label" : "Liquidation Request",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-liquidation-request",
+  "type" : "route",
+  "urlPrefix" : "liquidation-request"
+}

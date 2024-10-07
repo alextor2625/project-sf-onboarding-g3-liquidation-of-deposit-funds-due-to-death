@@ -1,0 +1,61 @@
+{
+  "appPageId" : "98907862-17b5-428d-aaed-db1dababe189",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "3f45c680-b936-41e5-9151-8eed39477a16",
+  "label" : "Liquidation Request",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:languageSelector",
+      "id" : "1a6ea40e-0abe-4325-aae4-463cd6a5b62d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:portalHeroComponent",
+      "id" : "ffca5309-c54c-4890-bc0e-2c7b56af8ee9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d47e8a5e-a235-4fbb-9990-aaaa7a7a57a1",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:liquidationOfFundsProcessForm",
+      "id" : "325d9ba9-e8c7-4af8-b534-740de49d3a94",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3151d98c-cd84-495f-93a7-f9167e89fe8a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "f0e53101-99fd-45b2-a708-cb6c99c1f290",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Liquidation Request"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bb1b3bd8-28ff-4580-86b6-e2e519f251ef",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3646fa90-8ef6-43a3-a970-8eb35ff546be",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-liquidation-request"
+}

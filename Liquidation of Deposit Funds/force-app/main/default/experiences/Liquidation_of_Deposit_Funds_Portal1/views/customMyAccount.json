@@ -1,0 +1,42 @@
+{
+  "appPageId" : "98907862-17b5-428d-aaed-db1dababe189",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "b6457f03-f8fc-4770-a155-0fd1bbf955d7",
+  "label" : "Custom My Account",
+  "regions" : [ {
+    "id" : "b1dde125-83c9-4cbd-b64e-8784fdd9820d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "showLegacyActivityComposer" : false,
+        "tab1Type" : "details",
+        "tab2Type" : "none",
+        "tab3Type" : "none",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "38fdf100-cb7f-49b7-bf68-dc1d99db2259",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "13a1bee4-c22d-47f7-9f66-0cffa4b34369",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "322b2e2e-d0e8-40e6-a9f0-704fbbf177eb",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "my-account"
+}

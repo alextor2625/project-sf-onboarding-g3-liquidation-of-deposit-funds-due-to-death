@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Workflow_Status__c</fieldName>
+    <masterLabel>Workflow Status Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Congratulations!! You Completed a Case!&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Please Complete The Remaining Fields&lt;/p&gt;</info>
+        <picklistValueName>Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Credit_Cards_Coded_and_Closed__c</fieldNames>
+        <fieldNames>CD_JIRA_Verification__c</fieldNames>
+        <fieldNames>Verify_Goverment_Deposite_After_Death__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Great job so far! Keep up the good work! &lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>In-Progress</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;This Case is Assigned to a Agent&lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>
