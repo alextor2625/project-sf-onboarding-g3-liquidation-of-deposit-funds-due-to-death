@@ -126,6 +126,21 @@
           "regionName" : "search",
           "type" : "region"
         }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "navAlignment" : "left",
+              "navItemThreshold" : 6,
+              "navigationMenuEditorRefresh" : "Default_Navigation_Copy"
+            },
+            "componentName" : "forceCommunity:themeNav",
+            "id" : "bfc596b0-b78c-4f00-a55f-fb74fec4da8e",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "07d1099e-20c3-42a8-a153-ccee133c9a88",
+          "regionName" : "nav",
+          "type" : "region"
+        }, {
           "id" : "53737e66-a0a1-473d-80a2-92d6b0d5f75d",
           "regionName" : "cartIcon",
           "type" : "region"
@@ -354,6 +369,21 @@
           } ],
           "id" : "72f94d81-e0c8-42c0-8b18-b316af1b5a38",
           "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "navAlignment" : "left",
+              "navItemThreshold" : 6,
+              "navigationMenuEditorRefresh" : "Default_Navigation_Copy"
+            },
+            "componentName" : "forceCommunity:themeNav",
+            "id" : "881a1284-d434-4ba2-aac8-ebba663311d2",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "56c10156-feef-4ed1-a2ee-bfaa99f067b0",
+          "regionName" : "nav",
           "type" : "region"
         }, {
           "id" : "3641adb7-26d0-4d29-b26b-b5f68afee0cf",
