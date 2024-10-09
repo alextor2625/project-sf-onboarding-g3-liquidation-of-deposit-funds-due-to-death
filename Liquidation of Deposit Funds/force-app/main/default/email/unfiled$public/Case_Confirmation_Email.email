@@ -81,7 +81,7 @@
         <!-- Email Body -->
         <div class="email-container">
             <div class="content">
-                <p>Hi <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                <p>Hi <span class="red-text">{!Case.Contact}</span>:</p>
                 <p>We are sorry for your loss and we are here to support you in these process. We have received your Liquidation Funds request. Your ticket number is <span class="red-text">{!Case.CaseNumber}</span> and you may use it as reference.</p>
                 <p>We will review the submitted documentation and information and send you an email with the resolution of your request.</p>
                 <p>If you have any questions, you can contact us at <a href="tel:+17877243650">787-724-3650</a> or visit one of our branches.</p>

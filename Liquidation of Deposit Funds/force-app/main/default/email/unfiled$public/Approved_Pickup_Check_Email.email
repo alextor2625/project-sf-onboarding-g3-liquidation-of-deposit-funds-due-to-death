@@ -82,7 +82,7 @@
             <!-- Email Body -->
             <div class="email-container">
                 <div class="content">
-                    <p>Hi <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                    <p>Hi <span class="red-text">{!Case.Contact}</span>:</p>
                     <p>
                         Please accept our heartfelt condolences during this difficult time. 
                         We are here to offer our full support. We have carefully reviewed your 

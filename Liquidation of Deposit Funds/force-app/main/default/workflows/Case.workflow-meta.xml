@@ -20,7 +20,7 @@
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Approved_Deposit_Espanol</template>
+        <template>unfiled$public/Approved_Deposit_Spanish</template>
     </alerts>
     <alerts>
         <fullName>Approved_Pickup_Check</fullName>
@@ -42,7 +42,7 @@
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Approved_PickUp_Espanol</template>
+        <template>unfiled$public/Approved_PickUp_Spanish</template>
     </alerts>
     <alerts>
         <fullName>Case_Creation_Confirmation_Email</fullName>
@@ -64,7 +64,7 @@
             <type>email</type>
         </recipients>
         <senderType>DefaultWorkflowUser</senderType>
-        <template>unfiled$public/Case_Confirmation_Espanol</template>
+        <template>unfiled$public/Case_Confirmation_Spanish</template>
     </alerts>
     <alerts>
         <fullName>Denied</fullName>
@@ -97,7 +97,7 @@
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Denied_Exceed_15k_Espanol</template>
+        <template>unfiled$public/Denied_Exceed_15k_Spanish</template>
     </alerts>
     <alerts>
         <fullName>Denied_No_Available_Funds_Email</fullName>

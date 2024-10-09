@@ -5,7 +5,7 @@
     <name>Denied - Spanish</name>
     <style>none</style>
     <subject>Denegado</subject>
-    <textOnly>Hola {!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+    <textOnly>Hola {!Case.Contact}:
 
 Entendemos que este es un momento difícil para usted, y queremos expresarle nuestras más sinceras condolencias. Nuestro equipo está comprometido a brindarle apoyo a lo largo de este proceso. Tras revisar su solicitud de Fondos de Liquidación bajo el ticket {!Case.CaseNumber}, lamentamos informarle que no podemos proceder en este momento. La documentación proporcionada es incorrecta o está incompleta.
 

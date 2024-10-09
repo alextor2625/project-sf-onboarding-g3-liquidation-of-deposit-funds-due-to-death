@@ -82,7 +82,7 @@
             <!-- Cuerpo del correo -->
             <div class="email-container">
                 <div class="content">
-                    <p>Hola <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                    <p>Hola <span class="red-text">{!Case.Contact}</span>:</p>
                     <p>
                         Entendemos que este es un momento difícil para usted, y queremos expresarle nuestras más sinceras condolencias. 
                         Nuestro equipo está comprometido a brindarle apoyo a lo largo de este proceso. Tras revisar su solicitud de Fondos 

@@ -259,22 +259,8 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Account_First_Name__c</fieldItem>
-                <identifier>RecordAccount_First_Name__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Account_Last_Name__c</fieldItem>
-                <identifier>RecordAccount_Last_Name__cField</identifier>
+                <fieldItem>Record.Contact.Name</fieldItem>
+                <identifier>RecordContactNameField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1b9ff71d-119e-41ab-b9ff-6e7144226a45</name>
@@ -549,13 +535,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Amount_Disbursed__c</fieldItem>
                 <identifier>RecordAmount_Disbursed_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Case_Owner_Name__r.IsActive}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>

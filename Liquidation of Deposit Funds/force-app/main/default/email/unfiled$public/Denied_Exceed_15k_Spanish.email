@@ -82,18 +82,17 @@
             <!-- Cuerpo del correo -->
             <div class="email-container">
                 <div class="content">
-                    <p>Hola <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                    <p>Hola <span class="red-text">{!Case.Contact}</span>:</p>
                     <p>
-                        Por favor, acepte nuestras más sinceras condolencias en este momento difícil. 
-                        Estamos aquí para ofrecerle todo nuestro apoyo. Hemos revisado cuidadosamente su 
-                        solicitud de Fondos de Liquidación asociada al ticket <span class="red-text">{!Case.CaseNumber}</span>, 
-                        y nos complace informarle que ha sido aprobada. Su cheque ya está disponible para ser recogido 
-                        en nuestra sucursal <span class="red-text">{!Case.Branch_Name__c}</span> en <span class="red-text">{!Case.Branch_Town__c}</span>.
+                        Entendemos que este es un momento difícil para usted, y queremos expresarle nuestras más sinceras condolencias. 
+                        Nuestro equipo está comprometido a brindarle apoyo a lo largo de este proceso. Tras revisar su solicitud de Fondos 
+                        de Liquidación bajo el ticket <span class="red-text">{!Case.CaseNumber}</span>, lamentamos informarle que no 
+                        podemos proceder debido a que el monto del desembolso es mayor a $15,000 y necesita presentar un Certificado de Liberación de Gravamen Tributario.
                     </p>
                     <p>
-                        Le pedimos amablemente que traiga una identificación válida y mencione el número del ticket al llegar. 
-                        Si hay algo más que podamos hacer para ayudarle, no dude en ponerse en contacto con nosotros.
+                        Una vez que lo tenga, puede enviar otra solicitud.
                     </p>
+                    <p>Si tiene alguna pregunta, puede contactarnos al <a href="tel:+17877243650">787-724-3650</a> o visitar una de nuestras sucursales.</p>
                     <p>Estamos aquí para servirle;<br>
                     Banco Popular de Puerto Rico
                     </p>

@@ -194,11 +194,11 @@
         <field>Case.Account_Holder_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Case.Account_Last_Name__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Amount_Disbursed__c</field>
@@ -279,21 +279,21 @@
         <field>Case.Disbursement_Account_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>false</editable>
         <field>Case.Email__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.EngineeringReqNumber__c</field>
         <readable>true</readable>
     </fieldPermissions> -->
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.EntitlementId</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.First_Name__c</field>
@@ -314,11 +314,11 @@
         <field>Case.IsEscalated</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.IsStopped</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Is_there_a_Will__c</field>
@@ -329,16 +329,16 @@
         <field>Case.Last_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.MilestoneStatus</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.MilestoneStatusIcon</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Origin</field>
@@ -369,11 +369,11 @@
         <field>Case.Priority</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.ProductId</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.Product__c</field>
@@ -399,56 +399,56 @@
         <field>Case.SLAViolation__c</field>
         <readable>true</readable>
     </fieldPermissions> -->
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.ServiceContractId</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.SlaExitDate</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.SlaStartDate</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Social_Security_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.StopStartDate</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Subject</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.SuppliedCompany</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.SuppliedEmail</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.SuppliedName</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
+    </fieldPermissions> -->
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Case.SuppliedPhone</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.Type</field>
@@ -479,11 +479,11 @@
         <field>Event.Description</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!-- <fieldPermissions>
         <editable>true</editable>
         <field>Event.IsVisibleInSelfService</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> -->
     <fieldPermissions>
         <editable>true</editable>
         <field>Event.Type</field>

@@ -82,15 +82,18 @@
             <!-- Cuerpo del correo -->
             <div class="email-container">
                 <div class="content">
-                    <p>Hola <span class="red-text">{!Case.Account_First_Name__c}</span>:</p>
+                    <p>Hola <span class="red-text">{!Case.Contact}</span>:</p>
                     <p>
-                        Por favor, acepte nuestras más profundas condolencias por su pérdida. Estamos aquí para 
-                        brindarle el apoyo que necesite en este momento difícil. Hemos completado la revisión de su 
-                        solicitud de Liquidación de Fondos bajo el ticket <span class="red-text">{!Case.CaseNumber}</span>, 
-                        y nos complace confirmar que ha sido aprobada. La cantidad de <span class="red-text">{!Case.Amount_Disbursed__c}</span> 
-                        ha sido depositada en la cuenta que termina en <span class="red-text">{!Case.Disbursement_Account_Number__c}</span>.
+                        Por favor, acepte nuestras más sinceras condolencias en este momento difícil. 
+                        Estamos aquí para ofrecerle todo nuestro apoyo. Hemos revisado cuidadosamente su 
+                        solicitud de Fondos de Liquidación asociada al ticket <span class="red-text">{!Case.CaseNumber}</span>, 
+                        y nos complace informarle que ha sido aprobada. Su cheque ya está disponible para ser recogido 
+                        en nuestra sucursal <span class="red-text">{!Case.Branch_Name__c}</span> en <span class="red-text">{!Case.Branch_Town__c}</span>.
                     </p>
-                    <p>Si tiene alguna pregunta, puede contactarnos al <a href="tel:+17877243650">787-724-3650</a> o visitar una de nuestras sucursales.</p>
+                    <p>
+                        Le pedimos amablemente que traiga una identificación válida y mencione el número del ticket al llegar. 
+                        Si hay algo más que podamos hacer para ayudarle, no dude en ponerse en contacto con nosotros.
+                    </p>
                     <p>Estamos aquí para servirle;<br>
                     Banco Popular de Puerto Rico
                     </p>

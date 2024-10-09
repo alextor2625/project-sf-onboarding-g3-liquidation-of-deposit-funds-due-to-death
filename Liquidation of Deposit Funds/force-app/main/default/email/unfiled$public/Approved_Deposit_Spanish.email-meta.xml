@@ -2,10 +2,10 @@
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
     <encodingKey>UTF-8</encodingKey>
-    <name>Approved- Deposit Espanol</name>
+    <name>Approved- Deposit Spanish</name>
     <style>none</style>
     <subject>Approvado - Deposito Directo</subject>
-    <textOnly>Hola {!Case.Account_First_Name__c}:
+    <textOnly>Hola {!Case.Contact}:
 
 Por favor, acepte nuestras más profundas condolencias por su pérdida. Estamos aquí para brindarle el apoyo que necesite en este momento difícil. Hemos completado la revisión de su solicitud de Liquidación de Fondos bajo el ticket {!Case.CaseNumber}, y nos complace confirmar que ha sido aprobada. La cantidad de {!Case.Amount_Disbursed__c} ha sido depositada en la cuenta que termina en {!Case.Disbursement_Account_Number__c}.
 

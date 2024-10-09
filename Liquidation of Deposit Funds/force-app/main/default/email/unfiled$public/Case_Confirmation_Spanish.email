@@ -81,7 +81,7 @@
         <!-- Cuerpo del correo -->
         <div class="email-container">
             <div class="content">
-                <p>Hola <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                <p>Hola <span class="red-text">{!Case.Contact}</span>:</p>
                 <p>Lamentamos su pérdida y estamos aquí para apoyarle en este proceso. Hemos recibido su solicitud de Fondos de Liquidación. Su número de ticket es <span class="red-text">{!Case.CaseNumber}</span> y puede utilizarlo como referencia.</p>
                 <p>Revisaremos la documentación e información enviada y le enviaremos un correo electrónico con la resolución de su solicitud.</p>
                 <p>Si tiene alguna pregunta, puede contactarnos al <a href="tel:+17877243650">787-724-3650</a> o visitar una de nuestras sucursales.</p>

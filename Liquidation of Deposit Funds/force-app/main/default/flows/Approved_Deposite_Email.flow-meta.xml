@@ -15,10 +15,11 @@
             </value>
         </inputParameters>
         <nameSegment>Case.Approved_Deposite_Alert</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
-        <name>Soanish_Email</name>
+        <name>Spanish_Email</name>
         <label>Spanish Email</label>
         <locationX>50</locationX>
         <locationY>539</locationY>
@@ -32,6 +33,7 @@
             </value>
         </inputParameters>
         <nameSegment>Case.Approved_Deposite_Alert_Spanish</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
@@ -55,7 +57,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Soanish_Email</targetReference>
+                <targetReference>Spanish_Email</targetReference>
             </connector>
             <label>Spanish</label>
         </rules>
@@ -96,7 +98,7 @@
             <field>Email</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Email__c</elementReference>
+                <elementReference>$Record.ContactEmail</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>

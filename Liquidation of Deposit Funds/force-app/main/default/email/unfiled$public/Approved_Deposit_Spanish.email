@@ -82,15 +82,13 @@
             <!-- Cuerpo del correo -->
             <div class="email-container">
                 <div class="content">
-                    <p>Hola <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                    <p>Hola <span class="red-text">{!Case.Contact}</span>:</p>
                     <p>
-                        Entendemos que este es un momento difícil para usted, y queremos expresarle nuestras más sinceras condolencias. 
-                        Nuestro equipo está comprometido a brindarle apoyo a lo largo de este proceso. Tras revisar su solicitud de Fondos 
-                        de Liquidación bajo el ticket <span class="red-text">{!Case.CaseNumber}</span>, lamentamos informarle que no 
-                        podemos proceder debido a que el monto del desembolso es mayor a $15,000 y necesita presentar un Certificado de Liberación de Gravamen Tributario.
-                    </p>
-                    <p>
-                        Una vez que lo tenga, puede enviar otra solicitud.
+                        Por favor, acepte nuestras más profundas condolencias por su pérdida. Estamos aquí para 
+                        brindarle el apoyo que necesite en este momento difícil. Hemos completado la revisión de su 
+                        solicitud de Liquidación de Fondos bajo el ticket <span class="red-text">{!Case.CaseNumber}</span>, 
+                        y nos complace confirmar que ha sido aprobada. La cantidad de <span class="red-text">{!Case.Amount_Disbursed__c}</span> 
+                        ha sido depositada en la cuenta que termina en <span class="red-text">{!Case.Disbursement_Account_Number__c}</span>.
                     </p>
                     <p>Si tiene alguna pregunta, puede contactarnos al <a href="tel:+17877243650">787-724-3650</a> o visitar una de nuestras sucursales.</p>
                     <p>Estamos aquí para servirle;<br>

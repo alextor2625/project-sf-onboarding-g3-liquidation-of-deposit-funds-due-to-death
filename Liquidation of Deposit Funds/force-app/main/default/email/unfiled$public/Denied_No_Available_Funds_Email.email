@@ -82,7 +82,7 @@
             <!-- Email Body -->
             <div class="email-container">
                 <div class="content">
-                    <p>Hi <span class="red-text">{!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}</span>:</p>
+                    <p>Hi <span class="red-text">{!Case.Contact}</span>:</p>
                     <p>
                         We understand that this is a challenging time for you, and we want to extend our sincerest condolences. 
                         Our team is committed to supporting you throughout this process. Upon reviewing your Liquidation Funds 

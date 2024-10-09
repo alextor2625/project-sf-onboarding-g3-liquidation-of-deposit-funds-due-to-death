@@ -18,6 +18,7 @@
             </value>
         </inputParameters>
         <nameSegment>Case.Case_Creation_Confirmation_Email</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
@@ -38,6 +39,7 @@
             </value>
         </inputParameters>
         <nameSegment>Case.Case_Creation_Confirmation_Email_Spanish</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
@@ -246,7 +248,7 @@
             <field>Email</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Email__c</elementReference>
+                <elementReference>$Record.ContactEmail</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -271,11 +273,11 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <textTemplates>
         <name>CaseCreationInfo</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>Hi {!$Record.Account_First_Name__c}{!$Record.Account_Last_Name__c}:
+        <text>Hi [Contact Name]:
 We are sorry for your loss and we are here to support you in these process. We have received your Liquidation Funds request. Your ticket number is {!$Record.CaseNumber} and you may use it as reference. We will review the submitted documentation and information and send you an email with the resolution of your request. 
 If you have any questions, you can contact us at 787-724-3650 or visit one of our branches.
 We are here to serve you;
@@ -284,7 +286,7 @@ Banco Popular de Puerto Rico</text>
     <textTemplates>
         <name>CaseCreationInfoSpanish</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>Hola {!$Record.Account_First_Name__c}{!$Record.Account_Last_Name__c}:
+        <text>Hola [Contact Name]:
 Lamentamos su pérdida y estamos aquí para apoyarle en este proceso. Hemos recibido su solicitud de Fondos de Liquidación. Su número de ticket es {!$Record.CaseNumber} y puede utilizarlo como referencia.Revisaremos la documentación e información enviada y le enviaremos un correo electrónico con la resolución de su solicitud.
 Si tiene alguna pregunta, puede contactarnos al 787-724-3650 o visitar una de nuestras sucursales.
 Estamos aquí para servirle;
@@ -293,6 +295,6 @@ Banco Popular de Puerto Rico</text>
     <textTemplates>
         <name>UpdateFeed</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Email was sent to {!$Record.Email__c} for Case {!$Record.CaseNumber}.&lt;/p&gt;</text>
+        <text>&lt;p&gt;Email was sent to {!$Record.ContactEmail} for Case {!$Record.CaseNumber}.&lt;/p&gt;</text>
     </textTemplates>
 </Flow>

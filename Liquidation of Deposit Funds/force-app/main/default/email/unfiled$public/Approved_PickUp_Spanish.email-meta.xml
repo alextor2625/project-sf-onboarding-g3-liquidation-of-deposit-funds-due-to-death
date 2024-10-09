@@ -2,10 +2,10 @@
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
     <encodingKey>UTF-8</encodingKey>
-    <name>Approved-PickUp Espanol</name>
+    <name>Approved-PickUp Spanish</name>
     <style>none</style>
     <subject>Aprovado - Recogido de cheque</subject>
-    <textOnly>Hola {!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+    <textOnly>Hola {!Case.Contact}:
 
 Por favor, acepte nuestras más sinceras condolencias en este momento difícil. Estamos aquí para ofrecerle todo nuestro apoyo. Hemos revisado cuidadosamente su solicitud de Fondos de Liquidación asociada al ticket {!Case.CaseNumber}, y nos complace informarle que ha sido aprobada. Su cheque ya está disponible para ser recogido en nuestra sucursal {!Case.Branch_Name__c} en {!Case.Branch_Town__c}.
 

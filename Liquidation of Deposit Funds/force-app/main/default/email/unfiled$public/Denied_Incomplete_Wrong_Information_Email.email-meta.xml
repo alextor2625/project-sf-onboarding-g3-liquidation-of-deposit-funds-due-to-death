@@ -5,7 +5,7 @@
     <name>Denied Incomplete Wrong Information Email</name>
     <style>none</style>
     <subject>Request Denied</subject>
-    <textOnly>Hi {!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+    <textOnly>Hi {!Case.Contact}:
 
 We understand that this is a challenging time for you, and we want to extend our sincerest condolences. Our team is committed to supporting you throughout this process. Upon reviewing your Liquidation Funds request under ticket {!Case.CaseNumber}, we regret to inform you that we are unable to proceed at this time. The documentation provided is either incorrect or incomplete.
 

@@ -2,7 +2,7 @@ import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
 import { LightningElement, api, wire } from 'lwc';
 import {CurrentPageReference} from 'lightning/navigation';
 import WORKFLOW_STATUS_FIELD from "@salesforce/schema/Case.Workflow_Status__c";
-import ACCOUNT_FIRSTNAME_FIELD from "@salesforce/schema/Case.Account_First_Name__c";
+// import ACCOUNT_FIRSTNAME_FIELD from "@salesforce/schema/Case.Account_First_Name__c";
 
 export default class CaseStatusClientView extends LightningElement {
 
@@ -20,7 +20,7 @@ export default class CaseStatusClientView extends LightningElement {
     @wire(getRecord, {
         recordId: '$recordId',
         fields: [WORKFLOW_STATUS_FIELD],
-        optionalFields: [ACCOUNT_FIRSTNAME_FIELD],
+        // optionalFields: [ACCOUNT_FIRSTNAME_FIELD],
     })
     case;
 

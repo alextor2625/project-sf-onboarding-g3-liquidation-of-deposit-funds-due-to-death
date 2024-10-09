@@ -2,10 +2,10 @@
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
     <encodingKey>UTF-8</encodingKey>
-    <name>Case Confirmation Espanol</name>
+    <name>Case Confirmation Spanish</name>
     <style>none</style>
     <subject>Confirmacion de Caso</subject>
-    <textOnly>Hola {!Case.Account_First_Name__c} {!Case.Account_Last_Name__c}:
+    <textOnly>Hola {!Case.Contact}:
 
 Lamentamos su pérdida y estamos aquí para apoyarle en este proceso. Hemos recibido su solicitud de Fondos de Liquidación. Su número de ticket es {!Case.CaseNumber} y puede utilizarlo como referencia.
 
